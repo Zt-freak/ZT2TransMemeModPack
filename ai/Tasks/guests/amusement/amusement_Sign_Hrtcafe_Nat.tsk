@@ -1,0 +1,44 @@
+<BFAITaskTemplateList>
+   <BFAITaskTemplate Name="LookAtStatue" CursorTask="false" TaskDelayMin="300" TaskDelayMax="500" UniqueID="amusement:LookAtSign_Hrtcafe_Nat">
+      <BFAICreateData>
+         <Subjects>
+            <Guest/>
+						<Qualifiers inWater_OR_onLand="true"/>            
+         </Subjects>
+         <Targets>
+            <Sign_Hrtcafe_Nat/>
+            <Qualifiers inSight="15"/>
+         </Targets>
+         <Objects/>
+      </BFAICreateData>
+      <BFAIEvalData>
+         <BFAIAttributeFloatMap amusement="-10"/>
+      </BFAIEvalData>
+      <BFBehExecTask>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="guestactions:GoLookAt" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockRadial dockRadius="3" targetAnim="Stand_Idle"/>
+         <BFBehHeadLook/>
+         <BFBehFaceTarget/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="guestactions:LookingAt" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehPlaySet behSet="LookAtObject"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:LookAtStatue" priority="1" timeout="60" global="false" useTargetName="true"/>
+               <ZTEmoticonInfo emoticonName="EmoteAmusementgood"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+      </BFBehExecTask>
+      <BFAICompletionData>
+         <BFAIAttributeFloatMap amusement="-50" happiness="-10" gift="+5"/>
+      </BFAICompletionData>
+   </BFAITaskTemplate>
+</BFAITaskTemplateList>

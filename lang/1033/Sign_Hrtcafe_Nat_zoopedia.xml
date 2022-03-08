@@ -1,0 +1,16 @@
+﻿<ZT2Strings>
+      <LOC_STRING _locID="zoopedia_sign_hrtcafe_nat:entry">Natte Vloer HRT.CAFE sign</LOC_STRING>
+      <LOC_STRING _locID="zoopedia_sign_hrtcafe_nat:text">
+         <cell pady="0" width="1000"/>
+         <p/>
+         <cell width="260"/>
+         <cell width="640" height="320" bgimg="ui/zoopedia/topCellBg.dds">
+            <cell width="600" padx="20" pady="20">
+               <color r="255" g="255" b="255">
+                  <img src="entities/objects/scenery/Sign_Hrtcafe_Nat/Sign_Hrtcafe_Nat_icon.dds" sx="0" sy="0" sw="64" sh="64"/>
+                  <p/>The Natte Vloer HRT.CAFE sign is a wet floor warning sign, based on a wet floor warning sticker at Amersfoort Central Station. In 2022 the text "HRT.CAFE" was scribbled on the sticker. HRT.CAFE is an online platform for mail-ordering DIY HRT.
+               </color>
+            </cell>
+         </cell>
+      </LOC_STRING>
+</ZT2Strings>

@@ -1,0 +1,12 @@
+﻿<ZT2Strings>
+      <LOC_STRING _locID="entityname:Sign_Hrtcafe_Nat">Natte Vloer HRT.CAFE sign</LOC_STRING>
+      <LOC_STRING _locID="entityname:Sign_Hrtcafe_Nat_stt">Natte Vloer HRT.CAFE sign</LOC_STRING>
+      <LOC_STRING _locID="entityname:Sign_Hrtcafe_Nat_lower">The Natte Vloer HRT.CAFE sign</LOC_STRING>
+      <LOC_STRING _locID="entityname:Sign_Hrtcafe_Nat_ltt">
+         <color r="255" g="248" b="178">
+            <b>Natte Vloer HRT.CAFE sign</b>
+         </color>
+         <br/>
+         Click to select and place a Natte Vloer HRT.CAFE sign.
+      </LOC_STRING>
+</ZT2Strings>

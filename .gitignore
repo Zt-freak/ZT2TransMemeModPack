@@ -1,0 +1,6 @@
+# exclude file types
+*.zip
+*.z2f
+
+# exclude modules
+modules/

@@ -1,0 +1,59 @@
+<BFTypedBinder binderType="Sign_Hrtcafe_Nat">
+   <types>
+      <entity>
+         <scenery>
+            <Statue>
+               <Sign_Hrtcafe_Nat/>
+            </Statue>
+         </scenery>
+      </entity>
+   </types>
+   <instance>
+      <BFGEntity entityVersion="1">
+         <physObjParenting>
+            <parentObj parent="mainObj" child="shadowObj" rottype="use" postype="ignore" attachnode="link"/>
+         </physObjParenting>
+      </BFGEntity>
+   </instance>
+   <shared>
+      <ZTPlacementData minimumHeadroom="0.0" gridSnap="true" terrainFlatten="false" dockArrowStyle="special" dockArrowSize="1.0" icon3Doffset="0 -0.059180 0.312793" icon3Dscale="0.4" autoFootprint="false" moveable="true">
+         <cfootprint width="0" height="0"/>
+         <dfootprint width="1" height="1"/>
+      </ZTPlacementData>
+      <UIToggleButton template="adopt">
+         <UIAspect>
+            <default image="entities\objects\scenery\Sign_Hrtcafe_Nat\Sign_Hrtcafe_Nat_icon.dds"/>
+         </UIAspect>
+         <UIHelpInfo name="" short="" long="" help="" ids="entityname:Sign_Hrtcafe_Nat"/>
+         <on>
+            <event msg="ZT_SETPLACEMENTOBJECT" data="BFString" string="Sign_Hrtcafe_Nat"/>
+         </on>
+      </UIToggleButton>
+      <BFAIEntityDataShared f_FameReq="10" s_uisort="sign_animal" s_Zoopedia="zoopedia:zoopedia_sign_hrtcafe_nat:entry" b_SeeThrough="false"/>
+   </shared>
+   <binder>
+      <BFNamedBinder binderName="shadowObj">
+         <instance>
+            <BFPhysObj>
+               <BFMovingBlobShadowComponent shadowTexture="world\shadows\blob\round_blob.tga" baseNode="footprint" width="3.5" minLength="3.5" maxLength="7" minOffset="0" maxOffset="1.75"/>
+            </BFPhysObj>
+         </instance>
+      </BFNamedBinder>
+      <BFNamedBinder binderName="mainObj">
+         <instance>
+            <BFPhysObj>
+               <BFSimpleLODComponent modelfile="entities/objects/scenery/Sign_Hrtcafe_Nat/Sign_Hrtcafe_Nat.nif" switch="0 15 30"/>
+               <BFGroundFitComponent heightOffset="0.0"/>
+            </BFPhysObj>
+         </instance>
+      </BFNamedBinder>
+      <BFBinder>
+         <instance>
+            <ZTEconomyComponent cost="120">
+               <ZTTransaction name="build" costType="parent" type="debit" category="construction"/>
+               <ZTTransaction name="destroy" cost="80" costType="%parent" type="credit" category="recycling"/>
+            </ZTEconomyComponent>
+         </instance>
+      </BFBinder>
+   </binder>
+</BFTypedBinder>

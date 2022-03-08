@@ -1,0 +1,37 @@
+{
+  "ArchiveName": "zzz-HrtCafe-NatBord",
+  "RepoName": "GitHubAccount/Reponame",
+  "Author": "",
+  "Version": "v0.0.1",
+  "Type": "mod",
+  "License": "",
+  "Description": "This is a Zoo Tycoon 2 mod",
+  "Z2f": true,
+  "ZT2loc": "C:\\Program Files (x86)\\Microsoft Games\\Zoo Tycoon 2",
+  "IncludeFolders": [
+    "ai",
+    "awards",
+    "biomes",
+    "config",
+    "effects",
+    "entities",
+    "lang",
+    "locations",
+    "maps",
+    "materials",
+    "photochall",
+    "puzzles",
+    "scenario",
+    "scripts",
+    "shared",
+    "tourdata",
+    "ui",
+    "world",
+    "xpinfo"
+  ],
+  "ExcludeFolders": [
+    "modules"
+  ],
+  "Dependencies": [],
+  "DevDependencies": []
+}
