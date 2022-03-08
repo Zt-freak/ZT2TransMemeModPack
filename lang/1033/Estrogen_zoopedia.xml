@@ -1,0 +1,18 @@
+<ZT2Strings>
+    <LOC_STRING _locID="zoopedia_estrogen:entry">Estrogen</LOC_STRING>
+    <LOC_STRING _locID="zoopedia_estrogen:text">
+       <cell pady="0" width="1000"/>
+       <p/>
+       <cell width="260"/>
+       <cell width="640" height="320" bgimg="ui/zoopedia/topCellBg.dds">
+          <cell width="600" padx="20" pady="20">
+             <color r="255" g="255" b="255">
+                <img src="entities/objects/food/Estrogen/TerrainEstrogen_icon.dds" sx="0" sy="0" sw="64" sh="64"/>
+                <p/>Estrogen or oestrogen is a category of sex hormone responsible for the development and regulation of the female reproductive system and secondary sex characteristics.
+                <p/>There are three major endogenous estrogens that have estrogenic hormonal activity: estrone (E1), estradiol (E2), and estriol (E3). Estradiol, an estrane, is the most potent and prevalent. Another estrogen called estetrol (E4) is produced only during pregnancy.
+                <p/>Estrogens are synthesized in all vertebrates and some insects. Their presence in both vertebrates and insects suggests that estrogenic sex hormones have an ancient evolutionary history. Quantitatively, estrogens circulate at lower levels than androgens in both men and women. While estrogen levels are significantly lower in males than in females, estrogens nevertheless have important physiological roles in males.
+             </color>
+          </cell>
+       </cell>
+    </LOC_STRING>
+</ZT2Strings>

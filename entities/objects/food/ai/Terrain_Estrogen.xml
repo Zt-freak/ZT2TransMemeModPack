@@ -1,0 +1,100 @@
+<BFTypedBinder binderType="Terrain_Estrogen">
+    <types>
+        <entity>
+            <food>
+                <TerrainFood>
+                    <Terrain_Estrogen />
+                </TerrainFood>
+            </food>
+        </entity>
+    </types>
+    <instance>
+        <BFGEntity entityVersion="1" />
+    </instance>
+    <shared>
+        <UIToggleButton template="adopt">
+            <UIAspect>
+                <default image="entities\objects\food\Estrogen\TerrainEstrogen_icon.dds" />
+            </UIAspect>
+            <UIHelpInfo name="" short="" long="" help="" ids="entityname:Terrain_Estrogen" />
+            <on>
+                <event msg="ZT_SETPLACEMENTOBJECT" data="BFString" string="Terrain_Estrogen" />
+            </on>
+        </UIToggleButton>
+        <BFAIEntityDataShared s_FoodType="Water" s_prop="Estrogen_Prop" b_Sniffable="true" b_Food="true" s_Zoopedia="zoopedia:zoopedia_estrogen:entry" />
+    </shared>
+    <binder>
+        <BFNamedBinder binderName="mainObj">
+            <instance>
+                <BFPhysObj>
+                    <BFGroundFitComponent heightOffset="0.0" />
+                </BFPhysObj>
+            </instance>
+        </BFNamedBinder>
+        <BFNamedBinder binderName="full" required="1">
+            <instance>
+                <BFPhysObj>
+                    <BFSceneGraphComponent isBFR="true" modelfile="entities/objects/food/Estrogen/TerrainEstrogen_Full" />
+                    <BFDistanceCullComponent firstPersonOnly="true" cullDistance="20" />
+                </BFPhysObj>
+            </instance>
+        </BFNamedBinder>
+        <BFNamedBinder binderName="twothird" required="0">
+            <instance>
+                <BFPhysObj>
+                    <BFSceneGraphComponent isBFR="true" modelfile="entities/objects/food/Estrogen/TerrainEstrogen_66" />
+                    <BFDistanceCullComponent firstPersonOnly="true" cullDistance="10" />
+                </BFPhysObj>
+            </instance>
+        </BFNamedBinder>
+        <BFNamedBinder binderName="onethird" required="0">
+            <instance>
+                <BFPhysObj>
+                    <BFSceneGraphComponent isBFR="true" modelfile="entities/objects/food/Estrogen/TerrainEstrogen_33" />
+                    <BFDistanceCullComponent firstPersonOnly="true" cullDistance="5" />
+                </BFPhysObj>
+            </instance>
+        </BFNamedBinder>
+        <BFNamedBinder binderName="empty" required="0">
+            <instance>
+                <BFPhysObj>
+                    <BFSceneGraphComponent isBFR="true" modelfile="entities/objects/food/Estrogen/TerrainEstrogen_Empty" />
+                    <BFDistanceCullComponent firstPersonOnly="true" cullDistance="5" />
+                </BFPhysObj>
+            </instance>
+        </BFNamedBinder>
+        <BFBinder required="1">
+            <instance>
+                <BFAIEntityDataInstance f_FoodLevel="100" />
+            </instance>
+        </BFBinder>
+        <BFBinder required="1">
+            <instance>
+                <BFAIFadeController attribName="f_FoodLevel" currState="full" fadePeriod="1">
+                    <stateList>
+                        <full physObj="full" minRange="66" maxRange="101" />
+                        <twothird physObj="twothird" minRange="33" maxRange="66" />
+                        <onethird physObj="onethird" minRange="1" maxRange="33" />
+                        <empty physObj="empty" minRange="-101" maxRange="1" />
+                    </stateList>
+                </BFAIFadeController>
+            </instance>
+        </BFBinder>
+        <BFBinder>
+            <instance>
+                <ZTEconomyComponent cost="125">
+                    <ZTTransaction name="build" costType="parent" type="debit" category="animal_upkeep" />
+                    <ZTTransaction name="destroy" cost="80" costType="%parent" type="credit" category="recycling" />
+                    <ZTTransaction name="refill" cost="125" type="credit" category="animal_upkeep" />
+                </ZTEconomyComponent>
+            </instance>
+        </BFBinder>
+        <BFBinder required="1">
+            <instance>
+                <ZTAIStaffRequestController attribName="f_FoodLevel" thresholdValue="25" testType="1" cancelThresholdValue="50" cancelTestType="2">
+                    <ZTStaffRequestData tokenKey="t_FillFoodContainer" subjectType="Keeper" />
+                </ZTAIStaffRequestController>
+            </instance>
+        </BFBinder>
+    </binder>
+</BFTypedBinder>

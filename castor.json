@@ -33,5 +33,7 @@
     "modules"
   ],
   "Dependencies": [],
-  "DevDependencies": []
+  "DevDependencies": [
+    "ZtModArchive/ArluqTools/v2.7"
+  ]
 }

@@ -9,6 +9,7 @@
                <color r="255" g="255" b="255">
                   <img src="entities/objects/scenery/Sign_Hrtcafe_Nat/Sign_Hrtcafe_Nat_icon.dds" sx="0" sy="0" sw="64" sh="64"/>
                   <p/>The Natte Vloer HRT.CAFE sign is a wet floor warning sign, based on a wet floor warning sticker at Amersfoort Central Station. In 2022 the text "HRT.CAFE" was scribbled on the sticker. HRT.CAFE is an online platform for mail-ordering DIY HRT.
+                  <p/>Credits to Smannsaker and Zeta-Designs for the sign model and wooden pole texture.
                </color>
             </cell>
          </cell>

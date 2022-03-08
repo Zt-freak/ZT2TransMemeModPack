@@ -1,0 +1,214 @@
+<BFAITaskTemplateList>
+    <BFAITaskTemplate Name="EatKeeper" UniqueID="terrain_estrogen:EatKeeper">
+        <BFAICreateData>
+            <Subjects_AND>
+                <animal />
+                <b_Basic />
+                <Qualifiers inWater_OR_onLand="true" />
+            </Subjects_AND>
+            <Targets>
+                <Terrain_Estrogen />
+                <Qualifiers_AND f_FoodLevel="GE 1" inHabitat="true" />
+            </Targets>
+            <Objects />
+        </BFAICreateData>
+        <BFAIEvalData>
+            <BFAIAttributeFloatMap hunger="-40" />
+        </BFAIEvalData>
+        <BFBehExecTask>
+            <ZTBehFeedback>
+                <ZTFeedbackData>
+                    <ZTActionInfo locID="animalactions:GoingToEat" useTargetName="true" />
+                </ZTFeedbackData>
+            </ZTBehFeedback>
+            <BFBehDockRadial dockRadius=".3" subjectNode="Node_Mouth" targetAnim="Stand_Idle" />
+        </BFBehExecTask>
+        <BFAICompletionData>
+            <BFAIAttributeFloatMap hunger="-100" bathroom="30" hygiene="10" />
+            <BFBehExecTask>
+                <BFBehScript context="behavior" file="scripts/estrogen.lua" function="transition" />
+                <ZTBehFeedback>
+                    <ZTFeedbackData>
+                        <ZTActionInfo locID="animalactions:Eating" useTargetName="true" />
+                    </ZTFeedbackData>
+                </ZTBehFeedback>
+                <ZTBehViewEvent viewKey="Pos_2" />
+                <BFBehPlaySet behSet="Eat" />
+                <ZTBehFeedback>
+                    <ZTFeedbackData>
+                        <ZTEmoticonInfo emoticonName="EmoteAnimalHungerGood" />
+                    </ZTFeedbackData>
+                </ZTBehFeedback>
+            </BFBehExecTask>
+            <BFAITargetData f_FoodLevel="-20" />
+        </BFAICompletionData>
+        <BFAIFailureData>
+            <BFAIAttributeFloatMap />
+            <BFBehExecTask>
+                <BFBehPlaySet behSet="FailureSet" />
+            </BFBehExecTask>
+        </BFAIFailureData>
+    </BFAITaskTemplate>
+    <BFAITaskTemplate Name="EatKeeper" UniqueID="terrain_estrogen:EatKeeper:1">
+        <BFAICreateData>
+            <Subjects_AND>
+                <animal />
+                <b_Medium />
+                <Qualifiers inWater_OR_onLand="true" />
+            </Subjects_AND>
+            <Targets>
+                <Terrain_Estrogen />
+                <Qualifiers_AND f_FoodLevel="GE 1" inHabitat="true" />
+            </Targets>
+            <Objects />
+        </BFAICreateData>
+        <BFAIEvalData>
+            <BFAIAttributeFloatMap hunger="-40" />
+        </BFAIEvalData>
+        <BFBehExecTask>
+            <ZTBehFeedback>
+                <ZTFeedbackData>
+                    <ZTActionInfo locID="animalactions:GoingToEat" useTargetName="true" />
+                </ZTFeedbackData>
+            </ZTBehFeedback>
+            <BFBehDockRadial dockRadius=".3" subjectNode="Node_Mouth" targetAnim="Stand_Idle" />
+        </BFBehExecTask>
+        <BFAICompletionData>
+            <BFAIAttributeFloatMap hunger="-100" bathroom="30" hygiene="10" />
+            <BFBehExecTask>
+                <BFBehScript context="behavior" file="scripts/estrogen.lua" function="transition" />
+                <ZTBehFeedback>
+                    <ZTFeedbackData>
+                        <ZTActionInfo locID="animalactions:Eating" useTargetName="true" />
+                    </ZTFeedbackData>
+                </ZTBehFeedback>
+                <ZTBehViewEvent viewKey="Pos_3">
+                    <ZTFeedbackData>
+                        <ZTThoughtInfo locID="guestthoughts:AnimalEatGood" priority="1" timeout="60" global="false" useTargetTarget="true" useTargetName="true" />
+                    </ZTFeedbackData>
+                </ZTBehViewEvent>
+                <BFBehPlaySet behSet="Eat" />
+                <ZTBehFeedback>
+                    <ZTFeedbackData>
+                        <ZTEmoticonInfo emoticonName="EmoteAnimalHungerGood" />
+                    </ZTFeedbackData>
+                </ZTBehFeedback>
+            </BFBehExecTask>
+            <BFAITargetData f_FoodLevel="-20" />
+        </BFAICompletionData>
+        <BFAIFailureData>
+            <BFAIAttributeFloatMap />
+            <BFBehExecTask>
+                <BFBehPlaySet behSet="FailureSet" />
+            </BFBehExecTask>
+        </BFAIFailureData>
+    </BFAITaskTemplate>
+    <BFAITaskTemplate Name="EatKeeper" UniqueID="terrain_estrogen:EatKeeper:2">
+        <BFAICreateData>
+            <Subjects_AND>
+                <animal />
+                <b_Advanced />
+                <Qualifiers inWater_OR_onLand="true" />
+            </Subjects_AND>
+            <Targets>
+                <Terrain_Estrogen />
+                <Qualifiers_AND f_FoodLevel="GE 1" inHabitat="true" />
+            </Targets>
+            <Objects />
+        </BFAICreateData>
+        <BFAIEvalData>
+            <BFAIAttributeFloatMap hunger="-40" />
+        </BFAIEvalData>
+        <BFBehExecTask>
+            <ZTBehFeedback>
+                <ZTFeedbackData>
+                    <ZTActionInfo locID="animalactions:GoingToEat" useTargetName="true" />
+                </ZTFeedbackData>
+            </ZTBehFeedback>
+            <BFBehDockRadial dockRadius=".3" subjectNode="Node_Mouth" targetAnim="Stand_Idle" />
+        </BFBehExecTask>
+        <BFAICompletionData>
+            <BFAIAttributeFloatMap hunger="-100" bathroom="30" hygiene="10" />
+            <BFBehExecTask>
+                <BFBehScript context="behavior" file="scripts/estrogen.lua" function="transition" />
+                <ZTBehFeedback>
+                    <ZTFeedbackData>
+                        <ZTActionInfo locID="animalactions:Eating" useTargetName="true" />
+                    </ZTFeedbackData>
+                </ZTBehFeedback>
+                <ZTBehViewEvent viewKey="Pos_4">
+                    <ZTFeedbackData>
+                        <ZTThoughtInfo locID="guestthoughts:AnimalEatGood" priority="1" timeout="60" global="false" useTargetTarget="true" useTargetName="true" />
+                    </ZTFeedbackData>
+                </ZTBehViewEvent>
+                <BFBehPlaySet behSet="Eat" />
+                <ZTBehFeedback>
+                    <ZTFeedbackData>
+                        <ZTEmoticonInfo emoticonName="EmoteAnimalHungerGood" />
+                    </ZTFeedbackData>
+                </ZTBehFeedback>
+            </BFBehExecTask>
+            <BFAITargetData f_FoodLevel="-20" />
+        </BFAICompletionData>
+        <BFAIFailureData>
+            <BFAIAttributeFloatMap />
+            <BFBehExecTask>
+                <BFBehPlaySet behSet="FailureSet" />
+            </BFBehExecTask>
+        </BFAIFailureData>
+    </BFAITaskTemplate>
+    <BFAITaskTemplate Name="EatKeeper" UniqueID="terrain_estrogen:EatKeeper:3">
+        <BFAICreateData>
+            <Subjects_AND>
+                <animal />
+                <b_Elite />
+                <Qualifiers inWater_OR_onLand="true" />
+            </Subjects_AND>
+            <Targets>
+                <Terrain_Estrogen />
+                <Qualifiers_AND f_FoodLevel="GE 1" inHabitat="true" />
+            </Targets>
+            <Objects />
+        </BFAICreateData>
+        <BFAIEvalData>
+            <BFAIAttributeFloatMap hunger="-40" />
+        </BFAIEvalData>
+        <BFBehExecTask>
+            <ZTBehFeedback>
+                <ZTFeedbackData>
+                    <ZTActionInfo locID="animalactions:GoingToEat" useTargetName="true" />
+                </ZTFeedbackData>
+            </ZTBehFeedback>
+            <BFBehDockRadial dockRadius=".3" subjectNode="Node_Mouth" targetAnim="Stand_Idle" />
+        </BFBehExecTask>
+        <BFAICompletionData>
+            <BFAIAttributeFloatMap hunger="-100" bathroom="30" hygiene="10" />
+            <BFBehExecTask>
+                <BFBehScript context="behavior" file="scripts/estrogen.lua" function="transition" />
+                <ZTBehFeedback>
+                    <ZTFeedbackData>
+                        <ZTActionInfo locID="animalactions:Eating" useTargetName="true" />
+                    </ZTFeedbackData>
+                </ZTBehFeedback>
+                <ZTBehViewEvent viewKey="Pos_5">
+                    <ZTFeedbackData>
+                        <ZTThoughtInfo locID="guestthoughts:AnimalEatGood" priority="1" timeout="60" global="false" useTargetTarget="true" useTargetName="true" />
+                    </ZTFeedbackData>
+                </ZTBehViewEvent>
+                <BFBehPlaySet behSet="Eat" />
+                <ZTBehFeedback>
+                    <ZTFeedbackData>
+                        <ZTEmoticonInfo emoticonName="EmoteAnimalHungerGood" />
+                    </ZTFeedbackData>
+                </ZTBehFeedback>
+            </BFBehExecTask>
+            <BFAITargetData f_FoodLevel="-20" />
+        </BFAICompletionData>
+        <BFAIFailureData>
+            <BFAIAttributeFloatMap />
+            <BFBehExecTask>
+                <BFBehPlaySet behSet="FailureSet" />
+            </BFBehExecTask>
+        </BFAIFailureData>
+    </BFAITaskTemplate>
+</BFAITaskTemplateList>

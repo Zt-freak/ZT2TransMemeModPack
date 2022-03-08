@@ -1,0 +1,12 @@
+<ZT2Strings>
+    <LOC_STRING _locID="entityname:Terrain_Estrogen">Estrogen</LOC_STRING>
+    <LOC_STRING _locID="entityname:Terrain_Estrogen_stt">Estrogen</LOC_STRING>
+    <LOC_STRING _locID="entityname:Terrain_Estrogen_lower">Estrogen</LOC_STRING>
+    <LOC_STRING _locID="entityname:Terrain_Estrogen_ltt">
+       <color r="255" g="248" b="178">
+          <b>Estrogen</b>
+       </color>
+       <br/>
+       Click to select and place Estrogen.
+    </LOC_STRING>
+</ZT2Strings>
