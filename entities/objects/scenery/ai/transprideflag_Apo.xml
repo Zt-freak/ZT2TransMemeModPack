@@ -1,0 +1,48 @@
+<BFTypedBinder binderType="transprideflag_Apo">
+  <types>
+    <entity>
+      <scenery>
+        <Statue>
+          <transprideflag_Apo />
+        </Statue>
+      </scenery>
+    </entity>
+  </types>
+  <instance>
+    <BFGEntity entityVersion="1">
+      <pyhsObjParenting />
+    </BFGEntity>
+  </instance>
+  <shared>
+    <UIToggleButton template="adopt">
+      <UIAspect>
+        <default image="entities\objects\scenery\transpride_Apo\transpride_Apo_icon.dds" />
+      </UIAspect>
+      <UIHelpInfo name="" short="" long="" help="" ids="entityname:transprideflag_Apo" />
+      <on>
+        <event msg="ZT_SETPLACEMENTOBJECT" data="BFString" string="transprideflag_Apo" />
+      </on>
+    </UIToggleButton>
+    <ZTPlacementData Waterplacement="true" terrainFlatten="false" dockArrowStyle="standard" dockArrowSize=".75" icon3Doffset="-0.04502 0 0" waterPlacement="true" rampPlacement="true" selectable="true" moveable="true" />
+    <BFAIEntityDataShared s_Theme="default" s_uisort="e" s_Product="flag_RDing" s_Zoopedia="zoopedia:zoopedia_transpride_apo:entry" />
+  </shared>
+  <binder>
+    <BFNamedBinder binderName="mainObj">
+      <instance>
+        <BFPhysObj>
+          <BFSimpleLODComponent isBFR="true" modelfile="entities/objects/scenery/transpride_Apo/transpride_Apo.nif" scale=".75" switch="0 15 25 35" />
+          <BFGroundFitComponent heightOffset="0.0" />
+        </BFPhysObj>
+      </instance>
+<BFGCollisionData isStatic="false" isPassable="true" />
+    </BFNamedBinder>
+    <BFBinder>
+      <instance>
+        <ZTEconomyComponent cost="1000">
+          <ZTTransaction name="build" costType="parent" type="debit" category="construction" />
+          <ZTTransaction name="destroy" cost="2000" costType="%parent" type="credit" category="recycling" />
+        </ZTEconomyComponent>
+      </instance>
+    </BFBinder>
+  </binder>
+</BFTypedBinder>

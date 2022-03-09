@@ -1,0 +1,12 @@
+﻿<ZT2Strings>
+   <LOC_STRING _locID="entityname:transprideflag_Apo">Trans Pride Flag</LOC_STRING>
+   <LOC_STRING _locID="entityname:transprideflag_Apo_stt">Trans Pride Flag</LOC_STRING>
+   <LOC_STRING _locID="entityname:transprideflag_Apo_lower">the Trans Pride Flag</LOC_STRING>
+   <LOC_STRING _locID="entityname:transprideflag_Apo_ltt">
+      <color r="255" g="248" b="178">
+         <b>Trans Pride Flag</b>
+      </color>
+      <br />
+      Click to select and place a Trans Pride Flag.
+   </LOC_STRING>
+</ZT2Strings>

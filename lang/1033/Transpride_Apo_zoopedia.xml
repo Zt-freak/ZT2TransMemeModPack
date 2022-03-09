@@ -1,0 +1,18 @@
+<ZT2Strings>
+    <LOC_STRING _locID="zoopedia_transpride_apo:entry">Transgender pride flag</LOC_STRING>
+    <LOC_STRING _locID="zoopedia_transpride_apo:text">
+       <cell pady="0" width="1000"/>
+       <p/>
+       <cell width="260"/>
+       <cell width="640" height="320" bgimg="ui/zoopedia/topCellBg.dds">
+          <cell width="600" padx="20" pady="20">
+             <color r="255" g="255" b="255">
+                <img src="entities/objects/scenery/Transpride_Apo/Transpride_Apo_icon.dds" sx="0" sy="0" sw="64" sh="64"/>
+                <p/>The transgender flag is a light blue, pink and white pentacolour pride flag representing the transgender community, organizations, and individuals. It was designed by American trans woman Monica Helms in 1999.
+                <p/>Similar to the worldwide adoption of a number of identity-specific flags by the LGBT community around the world, including the Rainbow flag, the transgender pride flag is used throughout the world to represent the transgender community, though there are several other flags used and endorsed by varying transgender individuals, organizations and communities.
+                <p/>Credits to Feral Designs for the flag base.
+             </color>
+          </cell>
+       </cell>
+    </LOC_STRING>
+</ZT2Strings>
