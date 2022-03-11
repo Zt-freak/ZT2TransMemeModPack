@@ -1,0 +1,12 @@
+<ZT2Strings>
+    <LOC_STRING _locID="entityname:BlahajDummy">BLÅHAJ</LOC_STRING>
+    <LOC_STRING _locID="entityname:BlahajDummy_stt">BLÅHAJ</LOC_STRING>
+    <LOC_STRING _locID="entityname:BlahajDummy_lower">The BLÅHAJ</LOC_STRING>
+    <LOC_STRING _locID="entityname:BlahajDummy_ltt">
+       <color r="255" g="248" b="178">
+          <b>BLÅHAJ</b>
+       </color>
+       <br/>
+       Click to select and place BLÅHAJ.
+    </LOC_STRING>
+</ZT2Strings>

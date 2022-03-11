@@ -1,0 +1,20 @@
+<ZT2Strings>
+    <LOC_STRING _locID="zoopedia_blahajdummy:entry">BLÅHAJ</LOC_STRING>
+    <LOC_STRING _locID="zoopedia_blahajdummy:text">
+       <cell pady="0" width="1000"/>
+       <p/>
+       <cell width="260"/>
+       <cell width="640" height="320" bgimg="ui/zoopedia/topCellBg.dds">
+          <cell width="600" padx="20" pady="20">
+             <color r="255" g="255" b="255">
+                <img src="entities/objects/enrichment/BlahajDummy/BlahajDummy_icon.dds" sx="0" sy="0" sw="64" sh="64"/>
+                <p/>Big and safe to have by your side if you want to discover the world below the surface of the ocean. The blue shark can swim very far, dive really deep and hear noises from almost 250 meters away.
+                <p/>All soft toys are good at hugging, comforting and listening and are fond of play and mischief. In addition, they are reliable and tested for safety.
+                <p/>Children tend to be fascinated by any story about sharks – one of the ocean's most terrifying predators. This blue shark is not dangerous at all, just soft to hug and safe to have by their side.
+                <p/>Recommended for children 18 months and older.
+                <p/>Credits to IKEA of Sweden for the design of BLÅHAJ, credits to IsabelleDotJpeg for the model and texture.
+             </color>
+          </cell>
+       </cell>
+    </LOC_STRING>
+</ZT2Strings>
