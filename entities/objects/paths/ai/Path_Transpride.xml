@@ -1,0 +1,39 @@
+<BFTypedBinder binderType="Path_Transpride">
+    <types>
+        <entity>
+            <path>
+                <Path_Transpride />
+            </path>
+        </entity>
+    </types>
+    <instance>
+        <BFGEntity entityVersion="1" />
+    </instance>
+    <shared>
+        <UIToggleButton template="path">
+            <UIAspect>
+                <default image="entities\objects\paths\Transpride\path_trans_icon.dds" />
+            </UIAspect>
+            <UIHelpInfo name="" short="" long="" help="" ids="entityname:Path_Transpride" />
+            <on>
+                <event msg="ZT_SETPLACEMENTPATH" data="BFString" string="Path_Transpride" />
+            </on>
+        </UIToggleButton>
+        <BFAIEntityDataShared s_Zoopedia="zoopedia:zoopedia_asphalt:entry" />
+    </shared>
+    <binder>
+        <BFBinder>
+            <instance>
+                <ZTPath texture="entities/objects/paths/Transpride/path_trans_256.dds" curb="curb_asphalt" />
+            </instance>
+        </BFBinder>
+        <BFBinder>
+            <instance>
+                <ZTEconomyComponent cost="2.5">
+                    <ZTTransaction name="build" costType="parent" type="debit" category="construction" />
+                    <ZTTransaction name="destroy" cost="80" costType="%parent" type="credit" category="recycling" />
+                </ZTEconomyComponent>
+            </instance>
+        </BFBinder>
+    </binder>
+</BFTypedBinder>

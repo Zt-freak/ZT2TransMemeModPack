@@ -1,0 +1,12 @@
+<ZT2Strings>
+    <LOC_STRING _locID="entityname:Path_Transpride">Trans pride path</LOC_STRING>
+    <LOC_STRING _locID="entityname:Path_Transpride_stt">Trans pride path</LOC_STRING>
+    <LOC_STRING _locID="entityname:Path_Transpride_lower">The Trans pride path</LOC_STRING>
+    <LOC_STRING _locID="entityname:Path_Transpride_ltt">
+       <color r="255" g="248" b="178">
+          <b>Trans pride path</b>
+       </color>
+       <br/>
+       Click to select and place a Trans pride path.
+    </LOC_STRING>
+</ZT2Strings>
