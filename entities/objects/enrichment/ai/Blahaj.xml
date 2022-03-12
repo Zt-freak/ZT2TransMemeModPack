@@ -3,7 +3,9 @@
         <entity>
             <enrichment>
                 <toy>
-                    <BlahajDummy />
+                    <SealPreyDummy>
+                        <BlahajDummy />
+                    </SealPreyDummy>
                 </toy>
             </enrichment>
         </entity>
@@ -23,7 +25,7 @@
                 <event msg="ZT_SETPLACEMENTOBJECT" data="BFString" string="BlahajDummy" />
             </on>
         </UIToggleButton>
-        <BFAIEntityDataShared s_uisort="hu" s_Zoopedia="zoopedia:zoopedia_BlahajDummy:entry" f_FameReq="100" />
+        <BFAIEntityDataShared s_uisort="hu" s_Zoopedia="zoopedia:zoopedia_BlahajDummy:entry" f_FameReq="100" s_Product=""/>
         <ZTPlacementData randomRotate="false" gridSnap="true" autoFootprint="false" icon3Doffset="0 -.02 0.82" icon3Dscale="0.99" protectedPlacement="false" tankPlacement="true" waterPlacement="true" landPlacement="true" minimumHeadroom="0.85" minimumDepth="1">
             <cfootprint width="1" height="1" />
             <dfootprint width="1" height="1" />
