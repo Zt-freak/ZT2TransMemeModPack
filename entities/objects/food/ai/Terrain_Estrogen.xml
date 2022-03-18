@@ -21,7 +21,7 @@
                 <event msg="ZT_SETPLACEMENTOBJECT" data="BFString" string="Terrain_Estrogen" />
             </on>
         </UIToggleButton>
-        <BFAIEntityDataShared s_FoodType="Water" s_prop="Estrogen_Prop" b_Sniffable="true" b_Food="true" s_Zoopedia="zoopedia:zoopedia_estrogen:entry" />
+        <BFAIEntityDataShared s_FoodType="Water" s_prop="Estrogen_Prop" b_Sniffable="true" b_Food="true" s_Zoopedia="zoopedia:zoopedia_estrogen:entry" s_Product="Downloads" />
     </shared>
     <binder>
         <BFNamedBinder binderName="mainObj">

@@ -1,0 +1,51 @@
+<BFTypedBinder binderType="Testosterone">
+	<types>
+		<entity>
+			<enrichment>
+				<Testosterone />
+			</enrichment>
+		</entity>
+	</types>
+	<instance>
+		<BFGEntity entityVersion="1" />
+	</instance>
+	<shared>
+		<ZTPlacementData icon3Doffset="0 0 0.857978" icon3Dscale="1.237231" landPlacement="true" tankPlacement="true" waterPlacement="true" />
+		<UIToggleButton template="adopt">
+			<UIAspect>
+				<default image="entities\objects\enrichment\Testosterone\Testosterone_icon.dds" />
+			</UIAspect>
+			<UIHelpInfo help="" ids="entityname:Testosterone" long="" name="" short="" />
+			<on>
+				<event data="BFString" msg="ZT_SETPLACEMENTOBJECT" string="Testosterone" />
+			</on>
+		</UIToggleButton>
+		<BFAIEntityDataShared s_Product="Downloads" b_Sniffable="true" b_Water="true" b_Food="false" s_FoodType="Water" s_Zoopedia="zoopedia:zoopedia_testosterone:entry" />
+	</shared>
+	<binder>
+		<BFNamedBinder binderName="mainObj">
+			<instance>
+				<BFPhysObj>
+					<BFGroundFitComponent heightOffset="0.0" />
+				</BFPhysObj>
+			</instance>
+		</BFNamedBinder>
+		<BFNamedBinder binderName="full" required="1">
+			<instance>
+				<BFPhysObj>
+					<BFSimpleLODComponent isBFR="true" modelfile="entities/objects/enrichment/Testosterone/Testosterone" />
+					<BFDistanceCullComponent cullDistance="20" firstPersonOnly="true" />
+				</BFPhysObj>
+			</instance>
+		</BFNamedBinder>
+		<BFBinder>
+			<instance>
+				<ZTEconomyComponent cost="75">
+					<ZTTransaction category="animal_upkeep" costType="parent" name="build" type="debit" />
+					<ZTTransaction category="recycling" cost="80" costType="%parent" name="destroy" type="credit" />
+					<ZTTransaction category="animal_upkeep" cost="75" name="refill" type="credit" />
+				</ZTEconomyComponent>
+			</instance>
+		</BFBinder>
+	</binder>
+</BFTypedBinder>

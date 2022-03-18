@@ -24,7 +24,7 @@
       </on>
     </UIToggleButton>
     <ZTPlacementData Waterplacement="true" terrainFlatten="false" dockArrowStyle="standard" dockArrowSize=".75" icon3Doffset="-0.04502 0 0" waterPlacement="true" rampPlacement="true" selectable="true" moveable="true" />
-    <BFAIEntityDataShared s_Theme="default" s_uisort="e" s_Product="flag_RDing" s_Zoopedia="zoopedia:zoopedia_transpride_apo:entry" />
+    <BFAIEntityDataShared s_Theme="default" s_uisort="e" s_Zoopedia="zoopedia:zoopedia_transpride_apo:entry" s_Product="Downloads"/>
   </shared>
   <binder>
     <BFNamedBinder binderName="mainObj">

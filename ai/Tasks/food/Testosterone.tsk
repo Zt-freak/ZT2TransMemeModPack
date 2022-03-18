@@ -1,0 +1,50 @@
+<BFAITaskTemplateList>
+    <BFAITaskTemplate Name="DrinkKeeper" reserveTag="Drink" UniqueID="Testosterone:DrinkKeeper">
+        <BFAICreateData>
+            <Subjects_AND>
+                <b_landAnimal />
+                <Qualifiers inWater_OR_onLand="true" />
+            </Subjects_AND>
+            <Targets>
+                <Testosterone />
+            </Targets>
+            <Objects />
+        </BFAICreateData>
+        <BFAIEvalData>
+            <BFAIAttributeFloatMap thirst="-80" />
+        </BFAIEvalData>
+        <BFBehExecTask>
+            <ZTBehFeedback>
+                <ZTFeedbackData>
+                    <ZTActionInfo locID="animalactions:GoingToUse" useTargetName="true" />
+                </ZTFeedbackData>
+                <BFBehScript context="behavior" file="scripts/testo.lua" function="transition" />
+            </ZTBehFeedback>
+            <BFBehDockRadial dockRadius=".3" subjectNode="Node_Mouth" targetAnim="Stand_Idle" />
+        </BFBehExecTask>
+        <BFAICompletionData>
+            <BFAIAttributeFloatMap bathroom="40" thirst="-100" hygiene="10" />
+            <BFBehExecTask>
+                <BFBehScript context="behavior" file="scripts/testo.lua" function="transition" />
+                <ZTBehFeedback>
+                    <ZTFeedbackData>
+                        <ZTActionInfo locID="animalactions:Eating" useTargetName="true" />
+                    </ZTFeedbackData>
+                </ZTBehFeedback>
+                <ZTBehViewEvent viewKey="Pos_2" />
+                <BFBehPlaySet behSet="Roll" />
+            </BFBehExecTask>
+            <BFAITargetData f_thirst="-20" />
+            <BFAITokenList>
+                <BFAIToken GiveTo="subject" Name="t_Chew" Timein="30" Timeout="180" />
+            </BFAITokenList>
+            <BFAITargetData f_FoodLevel="-20" />
+        </BFAICompletionData>
+        <BFAIFailureData>
+            <BFAIAttributeFloatMap />
+            <BFBehExecTask>
+                <BFBehPlaySet behSet="FailureSet" />
+            </BFBehExecTask>
+        </BFAIFailureData>
+    </BFAITaskTemplate>
+</BFAITaskTemplateList>

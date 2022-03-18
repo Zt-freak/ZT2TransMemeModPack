@@ -29,7 +29,7 @@
             <event msg="ZT_SETPLACEMENTOBJECT" data="BFString" string="Sign_Hrtcafe_Nat"/>
          </on>
       </UIToggleButton>
-      <BFAIEntityDataShared f_FameReq="10" s_uisort="sign_animal" s_Zoopedia="zoopedia:zoopedia_sign_hrtcafe_nat:entry" b_SeeThrough="false"/>
+      <BFAIEntityDataShared f_FameReq="10" s_uisort="sign_animal" s_Zoopedia="zoopedia:zoopedia_sign_hrtcafe_nat:entry" b_SeeThrough="false" s_Product="Downloads" />
    </shared>
    <binder>
       <BFNamedBinder binderName="shadowObj">

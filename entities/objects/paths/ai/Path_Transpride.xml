@@ -19,7 +19,7 @@
                 <event msg="ZT_SETPLACEMENTPATH" data="BFString" string="Path_Transpride" />
             </on>
         </UIToggleButton>
-        <BFAIEntityDataShared s_Zoopedia="zoopedia:zoopedia_asphalt:entry" />
+        <BFAIEntityDataShared s_Zoopedia="zoopedia:zoopedia_asphalt:entry" s_Product="Downloads" />
     </shared>
     <binder>
         <BFBinder>

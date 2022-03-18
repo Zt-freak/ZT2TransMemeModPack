@@ -13,7 +13,7 @@
             <Objects />
         </BFAICreateData>
         <BFAIEvalData>
-            <BFAIAttributeFloatMap hunger="-40" />
+            <BFAIAttributeFloatMap hunger="-80" />
         </BFAIEvalData>
         <BFBehExecTask>
             <ZTBehFeedback>

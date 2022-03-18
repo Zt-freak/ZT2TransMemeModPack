@@ -1,0 +1,12 @@
+<ZT2Strings>
+    <LOC_STRING _locID="entityname:Testosterone">Testosterone</LOC_STRING>
+    <LOC_STRING _locID="entityname:Testosterone_stt">Testosterone</LOC_STRING>
+    <LOC_STRING _locID="entityname:Testosterone_lower">Testosterone</LOC_STRING>
+    <LOC_STRING _locID="entityname:Testosterone_ltt">
+       <color r="255" g="248" b="178">
+          <b>Testosterone</b>
+       </color>
+       <br/>
+       Click to select and place Testosterone.
+    </LOC_STRING>
+</ZT2Strings>
