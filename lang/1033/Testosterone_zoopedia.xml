@@ -8,7 +8,7 @@
           <cell width="600" padx="20" pady="20">
              <color r="255" g="255" b="255">
                 <img src="entities/objects/enrichment/Testosterone/Testosterone_icon.dds" sx="0" sy="0" sw="64" sh="64"/>
-                <p/>
+                <p/>Testosterone is a steroid from the androstane class containing a ketone and a hydroxyl group at positions three and seventeen respectively. It is biosynthesized in several steps from cholesterol and is converted in the liver to inactive metabolites.
                 <p/>Credits to Mjmannella for the puddle base.
              </color>
           </cell>
