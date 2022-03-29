@@ -77,7 +77,7 @@
             <BFBehScript context="behavior" file="scripts/setmates.lua" function="setmates"/>
             <ZTBehFeedback>
                <ZTFeedbackData>
-                  <ZTEmoticonInfo emoticonName="Emotelovewins"/>
+                  <ZTEmoticonInfo emoticonName="EmoteAnimalReproductionVeryGood"/>
                </ZTFeedbackData>
             </ZTBehFeedback>
          </BFBehExecTask>
@@ -166,7 +166,7 @@
             <BFBehScript context="behavior" file="scripts/setmates.lua" function="setmates"/>
             <ZTBehFeedback>
                <ZTFeedbackData>
-                  <ZTEmoticonInfo emoticonName="Emotelovewins"/>
+                  <ZTEmoticonInfo emoticonName="EmoteAnimalReproductionVeryGood"/>
                </ZTFeedbackData>
             </ZTBehFeedback>
          </BFBehExecTask>
@@ -242,7 +242,7 @@
         <BFBehScript context="behavior" file="scripts/setmates.lua" function="setmates"/>
         <ZTBehFeedback>
           <ZTFeedbackData>
-            <ZTEmoticonInfo emoticonName="Emotelovewins"/>
+            <ZTEmoticonInfo emoticonName="EmoteAnimalReproductionVeryGood"/>
           </ZTFeedbackData>
         </ZTBehFeedback>
       </BFBehExecTask>
@@ -318,7 +318,7 @@
         <BFBehScript context="behavior" file="scripts/setmates.lua" function="setmates"/>
         <ZTBehFeedback>
           <ZTFeedbackData>
-            <ZTEmoticonInfo emoticonName="Emotelovewins"/>
+            <ZTEmoticonInfo emoticonName="EmoteAnimalReproductionVeryGood"/>
           </ZTFeedbackData>
         </ZTBehFeedback>
       </BFBehExecTask>
@@ -407,7 +407,7 @@
          <BFBehExecTask>
             <ZTBehFeedback>
                <ZTFeedbackData>
-                  <ZTEmoticonInfo emoticonName="EmoteAnimallovewins"/>
+                  <ZTEmoticonInfo emoticonName="EmoteAnimalReproductionVeryGood"/>
                </ZTFeedbackData>
             </ZTBehFeedback>
          </BFBehExecTask>
@@ -532,7 +532,7 @@
             <BFBehScript context="behavior" file="scripts/setmates.lua" function="setmates"/>
             <ZTBehFeedback>
                <ZTFeedbackData>
-                  <ZTEmoticonInfo emoticonName="Emotelovewins"/>
+                  <ZTEmoticonInfo emoticonName="EmoteAnimalReproductionVeryGood"/>
                </ZTFeedbackData>
             </ZTBehFeedback>
          </BFBehExecTask>
@@ -621,7 +621,7 @@
          <BFBehExecTask>
             <ZTBehFeedback>
                <ZTFeedbackData>
-                  <ZTEmoticonInfo emoticonName="EmoteAnimallovewins"/>
+                  <ZTEmoticonInfo emoticonName="EmoteAnimalReproductionVeryGood"/>
                </ZTFeedbackData>
             </ZTBehFeedback>
          </BFBehExecTask>
@@ -746,7 +746,7 @@
             <BFBehScript context="behavior" file="scripts/setmates.lua" function="setmates"/>
             <ZTBehFeedback>
                <ZTFeedbackData>
-                  <ZTEmoticonInfo emoticonName="Emotelovewins"/>
+                  <ZTEmoticonInfo emoticonName="EmoteAnimalReproductionVeryGood"/>
                </ZTFeedbackData>
             </ZTBehFeedback>
          </BFBehExecTask>
@@ -833,7 +833,7 @@
             <BFBehScript context="behavior" file="scripts/setmates.lua" function="setmates"/>
             <ZTBehFeedback>
                <ZTFeedbackData>
-                  <ZTEmoticonInfo emoticonName="Emotelovewins"/>
+                  <ZTEmoticonInfo emoticonName="EmoteAnimalReproductionVeryGood"/>
                </ZTFeedbackData>
             </ZTBehFeedback>
          </BFBehExecTask>
@@ -920,7 +920,7 @@
             <BFBehScript context="behavior" file="scripts/setmates.lua" function="setmates"/>
             <ZTBehFeedback>
                <ZTFeedbackData>
-                  <ZTEmoticonInfo emoticonName="Emotelovewins"/>
+                  <ZTEmoticonInfo emoticonName="EmoteAnimalReproductionVeryGood"/>
                </ZTFeedbackData>
             </ZTBehFeedback>
          </BFBehExecTask>

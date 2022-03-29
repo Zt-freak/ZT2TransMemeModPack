@@ -12,3 +12,6 @@ This mod adds Trans pride paths, a flag, a HRT.CAFE sign and estrogen and testos
 - IKEA of Sweden - BLÅHAJ zoopedia entry
 - Wikipedia - Estrogen and testosterone zoopedia entry
 - Nederlandse Spoorwegen - Gladde vloer sign design
+
+## Cut content
+- Gender dysphoria is no more :) It was supposed to be a custom disease, but due to needing to override game files, it is not implemented.
