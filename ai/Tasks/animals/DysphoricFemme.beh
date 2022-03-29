@@ -1,0 +1,28 @@
+<BehaviorSets>
+    <GetDysphoricFemme>
+        <subjects>
+            <animal />
+        </subjects>
+        <behaviors>
+            <BFBehAnimate targetAnim="Stand_Idle" />
+        </behaviors>
+    </GetDysphoricFemme>
+    <CureDysphoricFemme>
+        <subjects>
+            <animal />
+        </subjects>
+        <behaviors>
+            <BFBehAnimate targetAnim="Stand_Idle" />
+        </behaviors>
+    </CureDysphoricFemme>
+    <Diseased_DysphoricFemme>
+        <subjects>
+            <animal />
+        </subjects>
+        <behaviors>
+            <BFBehSendToken>
+                <BFAITokenList />
+            </BFBehSendToken>
+        </behaviors>
+    </Diseased_DysphoricFemme>
+</BehaviorSets>

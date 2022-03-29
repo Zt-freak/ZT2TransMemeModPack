@@ -1,0 +1,149 @@
+<BFAITaskTemplateList>
+    <BFAITaskTemplate Name="ReceiveDysphoriaFemme" TaskDelayMin="600" TaskDelayMax="1200" Priority="4" UniqueID="Dysphoria:ReceiveDysphoriaFemme">
+        <BFAICreateData>
+            <Subjects>
+                <animal />
+                <Qualifiers b_Male="true" />
+            </Subjects>
+            <Targets>
+                <self />
+            </Targets>
+            <Objects>
+                <t_GetDysphoriaFemme />
+            </Objects>
+        </BFAICreateData>
+        <BFAIEvalData fixedScore="500" />
+        <BFBehExecTask>
+            <BFBehScript context="behavior" file="scenario/scripts/disease.lua" function="makeAnimalSick" params="DysphoriaFemme" />
+            <BFBehSendToken>
+                <BFAITokenList>
+                    <BFAIToken Name="t_DysphoriaFemme" GiveTo="subject" Timein="0" Timeout="120" Reconsider="true" />
+                </BFAITokenList>
+            </BFBehSendToken>
+        </BFBehExecTask>
+        <BFAICompletionData>
+            <BFAISubjectData pink="100" />
+        </BFAICompletionData>
+        <BFAIFailureData>
+            <BFBehExecTask>
+                <BFBehPlaySet behSet="FailureSet" />
+            </BFBehExecTask>
+        </BFAIFailureData>
+    </BFAITaskTemplate>
+    <BFAITaskTemplate Name="CureDysphoriaFemme" UniqueID="Dysphoria:CureDysphoriaFemme">
+        <BFAICreateData>
+            <Subjects>
+                <animal />
+                <Qualifiers b_Disease="true" />
+            </Subjects>
+            <Targets>
+                <self />
+            </Targets>
+            <Objects>
+                <t_CureDysphoriaFemme />
+            </Objects>
+        </BFAICreateData>
+        <BFAIEvalData fixedScore="555" />
+        <BFBehExecTask>
+            <BFBehScript context="behavior" file="scenario/scripts/disease.lua" function="cureAnimal" />
+            <BFBehPlaySet behSet="CureDysphoricFemme" />
+        </BFBehExecTask>
+        <BFAICompletionData>
+            <BFAISubjectData pink="-100" />
+        </BFAICompletionData>
+        <BFAIFailureData>
+            <BFBehExecTask>
+                <BFBehPlaySet behSet="FailureSet" />
+            </BFBehExecTask>
+        </BFAIFailureData>
+    </BFAITaskTemplate>
+    <BFAITaskTemplate Name="GetSick_DysphoriaFemme" TaskDelayMin="30" TaskDelayMax="60" Priority="3" UniqueID="Dysphoria:GetSick_DysphoriaFemme">
+        <BFAICreateData>
+            <Subjects>
+                <animal />
+                <Qualifiers b_Male="true" />
+            </Subjects>
+            <Targets>
+                <self />
+            </Targets>
+            <Objects>
+                <t_DysphoriaFemme />
+            </Objects>
+        </BFAICreateData>
+        <BFAIEvalData fixedScore="504" />
+        <BFBehExecTask>
+            <ZTBehFeedback>
+                <ZTFeedbackData>
+                    <ZTActionInfo locID="animalactions:Sick" />
+                    <ZTMessageInfo locID="animalthoughts:DiseasedAnimal" priority="-1" timeout="60" global="true" useEntityName="true" />
+                </ZTFeedbackData>
+            </ZTBehFeedback>
+        </BFBehExecTask>
+        <BFAICompletionData>
+            <BFAIAttributeFloatMap pink="100" />
+            <BFBehExecTask>
+                <BFBehSendToken>
+                    <BFAITokenList>
+                        <BFAIToken Name="t_DysphoriaFemme2" GiveTo="subject" Timein="30" Timeout="90" Chance="100" Reconsider="true" />
+                    </BFAITokenList>
+                </BFBehSendToken>
+                <BFBehPlaySet behSet="GetDysphoricFemme" />
+                <BFBehPlaySet behSet="Sick" />
+                <ZTBehViewEvent viewKey="Neg_8">
+                    <ZTFeedbackData>
+                        <ZTThoughtInfo locID="guestthoughts:AnimalSickBad" priority="-1" timeout="60" global="false" useTargetName="true" />
+                    </ZTFeedbackData>
+                </ZTBehViewEvent>
+            </BFBehExecTask>
+        </BFAICompletionData>
+        <BFAIFailureData>
+            <BFBehExecTask>
+                <BFBehPlaySet behSet="FailureSet" />
+            </BFBehExecTask>
+        </BFAIFailureData>
+    </BFAITaskTemplate>
+    <BFAITaskTemplate Name="GetSick_DysphoriaFemme" TaskDelayMin="30" TaskDelayMax="60" Priority="3" UniqueID="Dysphoria:GetSick_DysphoriaFemme:2">
+        <BFAICreateData>
+            <Subjects>
+                <animal />
+                <Qualifiers b_Male="true" />
+            </Subjects>
+            <Targets>
+                <self />
+            </Targets>
+            <Objects>
+                <t_DysphoriaFemme2 />
+            </Objects>
+        </BFAICreateData>
+        <BFAIEvalData fixedScore="504" />
+        <BFBehExecTask>
+            <ZTBehFeedback>
+                <ZTFeedbackData>
+                    <ZTActionInfo locID="animalactions:Sick" />
+                </ZTFeedbackData>
+            </ZTBehFeedback>
+        </BFBehExecTask>
+        <BFAICompletionData>
+            <BFAIAttributeFloatMap pink="100" />
+            <BFBehExecTask>
+                <BFBehSendToken>
+                    <BFAITokenList>
+                        <BFAIToken Name="t_DysphoriaFemme" GiveTo="subject" Timein="30" Timeout="90" Chance="100" Reconsider="true" />
+                    </BFAITokenList>
+                </BFBehSendToken>
+                <BFBehPlaySet behSet="GetDysphoricFemme" />
+                <BFBehPlaySet behSet="Sick" />
+                <ZTBehViewEvent viewKey="Neg_8">
+                    <ZTFeedbackData>
+                        <ZTThoughtInfo locID="guestthoughts:AnimalSickBad" priority="-1" timeout="60" global="false" useTargetName="true" />
+                    </ZTFeedbackData>
+                </ZTBehViewEvent>
+            </BFBehExecTask>
+        </BFAICompletionData>
+        <BFAIFailureData>
+            <BFBehExecTask>
+                <BFBehPlaySet behSet="FailureSet" />
+            </BFBehExecTask>
+        </BFAIFailureData>
+    </BFAITaskTemplate>
+</BFAITaskTemplateList>

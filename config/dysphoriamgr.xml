@@ -1,0 +1,21 @@
+<ZTDiseaseMgr halfStarMinimum="1" diseaseCheckInterval="720" updateInterval="3" cureTimeout="2880">
+    <diseases>
+        <ZTDisease
+            name="DysphoriaFemme"
+            nameLocID="disease_names:dysphoriafemmename"
+            token="t_GetDysphoriaFemme"
+            cureToken="t_CureDysphoriaFemme"
+            clearTokens="t_GetDysphoriaFemme t_DysphoriaFemme t_DysphoriaFemme2"
+            targetTypes="animal"
+            chance="100"
+            singleQualifier="false"
+            searchForTargets="false"
+            researchLocIDBase="dysphoriafemmeresearch"
+            baseReward="5000"
+            rewardDelta="101"
+        >
+            <cause types="bathroomlarge" hint="exact" />
+            <cure types="Terrain_Estrogen" hint="exact" />
+        </ZTDisease>
+    </diseases>
+</ZTDiseaseMgr>

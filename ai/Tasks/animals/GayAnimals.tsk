@@ -1,0 +1,934 @@
+<BFAITaskTemplateList>  
+   <BFAITaskTemplate Name="InviteReproductionGay" TaskDelayMin="60" TaskDelayMax="180" UniqueID="InviteReproductionGay">
+      <BFAICreateData>
+         <Subjects>
+            <animal/>
+            <Qualifiers b_Male="1" b_Adult="1"/>
+         </Subjects>
+         <Targets>
+            <animal/>
+            <Qualifiers_AND inHabitat="true" b_Male="1" canMate="true" sameSpecies="true" b_Adult="1"/>
+         </Targets>
+      </BFAICreateData>
+      <BFAIEvalData needPointsGood="70">
+         <BFAIAttributeFloatMap reproduction="-40"/>
+      </BFAIEvalData>
+      <BFBehExecTask>
+         <BFBehHeadLook/>
+         <BFBehFaceTarget/>
+         <BFBehSendToken>
+            <BFAITokenList>
+               <BFAIToken Name="t_Reproduce" GiveTo="target" Payload="subject" Timeout="30" Reconsider="true"/>
+            </BFAITokenList>
+         </BFBehSendToken>
+         <BFBehPlaySet behSet="MatingCall_M"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:WaitMate" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimate targetAnim="Lie_Idle" playTime="35"/>
+      </BFBehExecTask>
+      <BFAICompletionData/>
+      <BFAIFailureData>
+         <BFBehExecTask>
+            <BFBehPlaySet behSet="FailureSet"/>
+         </BFBehExecTask>
+      </BFAIFailureData>
+   </BFAITaskTemplate>
+   <BFAITaskTemplate Name="RespondReproductionGay" reserveTag="General" UniqueID="RespondReproductionGay">
+      <BFAICreateData>
+         <Subjects>
+            <animal/>
+            <Qualifiers b_Male="1" b_Adult="1"/>
+         </Subjects>
+         <Targets>
+            <fromToken/>
+            <Qualifiers inHabitat="true" b_Male="1" b_Adult="1"/>
+         </Targets>
+         <Objects>
+            <t_Reproduce/>
+         </Objects>
+      </BFAICreateData>
+      <BFAIEvalData fixedScore="100"/>
+      <BFBehExecTask>
+         <BFBehHeadLook/>
+         <BFBehFaceTarget/>
+         <BFBehPlaySet behSet="MatingCall_M"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToMate" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockRadial subjectNode="Floor" targetRadius="3" rotError="180"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehViewEvent viewKey="Pos_5">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalMateGood" priority="1" timeout="60" global="false" useTargetTarget="true" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehSyncSet subjectBehSet="Mate" targetBehSet="Mate"/>
+      </BFBehExecTask>
+      <BFAICompletionData>
+         <BFAIAttributeFloatMap reproduction="-50" rest="-10"/>
+         <BFAITargetData rest="-10"/>
+         <BFBehExecTask>
+            <BFBehScript context="behavior" file="scripts/setmates.lua" function="setmates"/>
+            <ZTBehFeedback>
+               <ZTFeedbackData>
+                  <ZTEmoticonInfo emoticonName="Emotelovewins"/>
+               </ZTFeedbackData>
+            </ZTBehFeedback>
+         </BFBehExecTask>
+      </BFAICompletionData>
+      <BFAIFailureData>
+         <BFBehExecTask>
+            <BFBehPlaySet behSet="FailureSet"/>
+         </BFBehExecTask>
+      </BFAIFailureData>
+   </BFAITaskTemplate>
+   <BFAITaskTemplate Name="InviteReproductionLesbian" TaskDelayMin="60" TaskDelayMax="180" UniqueID="InviteReproductionLesbian">
+      <BFAICreateData>
+         <Subjects>
+            <animal/>
+            <Qualifiers b_Male="0" b_Adult="1"/>
+         </Subjects>
+         <Targets>
+            <animal/>
+            <Qualifiers_AND inHabitat="true" b_Male="0" canMate="true" sameSpecies="true" b_Adult="1"/>
+         </Targets>
+      </BFAICreateData>
+      <BFAIEvalData needPointsGood="70">
+         <BFAIAttributeFloatMap reproduction="-40"/>
+      </BFAIEvalData>
+      <BFBehExecTask>
+         <BFBehHeadLook/>
+         <BFBehFaceTarget/>
+         <BFBehSendToken>
+            <BFAITokenList>
+               <BFAIToken Name="t_Reproduce" GiveTo="target" Payload="subject" Timeout="30" Reconsider="true"/>
+            </BFAITokenList>
+         </BFBehSendToken>
+         <BFBehPlaySet behSet="MatingCall_F"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:WaitMate" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimate targetAnim="Lie_Idle" playTime="35"/>
+      </BFBehExecTask>
+      <BFAICompletionData/>
+      <BFAIFailureData>
+         <BFBehExecTask>
+            <BFBehPlaySet behSet="FailureSet"/>
+         </BFBehExecTask>
+      </BFAIFailureData>
+   </BFAITaskTemplate>
+   <BFAITaskTemplate Name="RespondReproductionLesbian" reserveTag="General" UniqueID="RespondReproductionLesbian">
+      <BFAICreateData>
+         <Subjects>
+            <animal/>
+            <Qualifiers b_Male="0" b_Adult="1"/>
+         </Subjects>
+         <Targets>
+            <fromToken/>
+            <Qualifiers inHabitat="true" b_Male="0" b_Adult="1"/>
+         </Targets>
+         <Objects>
+            <t_Reproduce/>
+         </Objects>
+      </BFAICreateData>
+      <BFAIEvalData fixedScore="100"/>
+      <BFBehExecTask>
+         <BFBehHeadLook/>
+         <BFBehFaceTarget/>
+         <BFBehPlaySet behSet="MatingCall_F"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToMate" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockRadial subjectNode="Floor" targetRadius="3" rotError="180"/>
+         <BFBehHeadLook disengage="true"/>
+         <ZTBehViewEvent viewKey="Pos_5">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalMateGood" priority="1" timeout="60" global="false" useTargetTarget="true" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehSyncSet subjectBehSet="Mate" targetBehSet="Mate"/>
+      </BFBehExecTask>
+      <BFAICompletionData>
+         <BFAIAttributeFloatMap reproduction="-50" rest="-10"/>
+         <BFAITargetData rest="-10"/>
+         <BFBehExecTask>
+            <BFBehScript context="behavior" file="scripts/setmates.lua" function="setmates"/>
+            <ZTBehFeedback>
+               <ZTFeedbackData>
+                  <ZTEmoticonInfo emoticonName="Emotelovewins"/>
+               </ZTFeedbackData>
+            </ZTBehFeedback>
+         </BFBehExecTask>
+      </BFAICompletionData>
+      <BFAIFailureData>
+         <BFBehExecTask>
+            <BFBehPlaySet behSet="FailureSet"/>
+         </BFBehExecTask>
+      </BFAIFailureData>
+   </BFAITaskTemplate>
+  <BFAITaskTemplate Name="InviteReproductionMarineGay" TaskDelayMin="60" TaskDelayMax="180" UniqueID="InviteReproductionMarineGay">
+    <BFAICreateData>
+      <Subjects>
+        <animal/>
+        <Qualifiers_AND b_Pregnant="E false" b_Male="1" isSwimming="true" b_Adult="1"/>
+      </Subjects>
+      <Targets>
+        <animal/>
+        <Qualifiers_AND inHabitat="true" b_Male="1" isSwimming="true" canMate="true" sameSpecies="true" b_Adult="1"/>
+      </Targets>
+    </BFAICreateData>
+    <BFAIEvalData needPointsGood="80">
+      <BFAIAttributeFloatMap reproduction="-40"/>
+    </BFAIEvalData>
+    <BFBehExecTask>
+      <BFBehSendToken>
+        <BFAITokenList>
+          <BFAIToken Name="t_Reproduce" GiveTo="target" Payload="subject" Radius="30" Timeout="15" Reconsider="true"/>
+        </BFAITokenList>
+      </BFBehSendToken>
+      <ZTBehFeedback>
+        <ZTFeedbackData>
+          <ZTActionInfo locID="animalactions:WaitMate" useTargetName="true"/>
+        </ZTFeedbackData>
+      </ZTBehFeedback>
+    </BFBehExecTask>
+    <BFAICompletionData/>
+    <BFAIFailureData>
+      <BFBehExecTask>
+        <BFBehPlaySet behSet="FailureSet"/>
+      </BFBehExecTask>
+    </BFAIFailureData>
+  </BFAITaskTemplate>
+  <BFAITaskTemplate Name="RespondReproductionMarineGay" reserveTag="General" UniqueID="RespondReproductionMarineGay">
+    <BFAICreateData>
+      <Subjects>
+        <animal/>
+        <Qualifiers isSwimming="true" b_Male="1" b_Adult="1"/>
+      </Subjects>
+      <Targets>
+        <fromToken/>
+        <Qualifiers_AND inWater="true" b_Male="1" isSwimming="true" inHabitat="true" b_Adult="1"/>
+      </Targets>
+      <Objects>
+        <t_Reproduce/>
+      </Objects>
+    </BFAICreateData>
+    <BFAIEvalData fixedScore="100"/>
+    <BFBehExecTask>
+      <ZTBehFeedback>
+        <ZTFeedbackData>
+          <ZTActionInfo locID="animalactions:GoingToMate" useTargetName="true"/>
+        </ZTFeedbackData>
+      </ZTBehFeedback>
+      <BFBehSyncSet subjectBehSet="Rendezvous" targetBehSet="Rendezvous"/>
+      <BFBehSyncSet subjectBehSet="ReproductionSwimLead" targetBehSet="ReproductionSwimFollow"/>
+    </BFBehExecTask>
+    <BFAICompletionData>
+      <BFAIAttributeFloatMap reproduction="-50" rest="-10"/>
+      <BFAITargetData rest="-10"/>
+      <BFBehExecTask>
+        <ZTBehViewEvent viewKey="Pos_3"/>
+        <BFBehScript context="behavior" file="scripts/setmates.lua" function="setmates"/>
+        <ZTBehFeedback>
+          <ZTFeedbackData>
+            <ZTEmoticonInfo emoticonName="Emotelovewins"/>
+          </ZTFeedbackData>
+        </ZTBehFeedback>
+      </BFBehExecTask>
+    </BFAICompletionData>
+    <BFAIFailureData>
+      <BFBehExecTask>
+        <BFBehPlaySet behSet="FailureSet"/>
+      </BFBehExecTask>
+    </BFAIFailureData>
+  </BFAITaskTemplate>
+  <BFAITaskTemplate Name="InviteReproductionMarineLesbian" TaskDelayMin="60" TaskDelayMax="180" UniqueID="InviteReproductionMarineLesbian">
+    <BFAICreateData>
+      <Subjects>
+        <animal/>
+        <Qualifiers_AND b_Pregnant="E false" b_Male="0" isSwimming="true" b_Adult="1"/>
+      </Subjects>
+      <Targets>
+        <animal/>
+        <Qualifiers_AND inHabitat="true" b_Male="0" isSwimming="true" canMate="true" sameSpecies="true" b_Adult="1"/>
+      </Targets>
+    </BFAICreateData>
+    <BFAIEvalData needPointsGood="80">
+      <BFAIAttributeFloatMap reproduction="-40"/>
+    </BFAIEvalData>
+    <BFBehExecTask>
+      <BFBehSendToken>
+        <BFAITokenList>
+          <BFAIToken Name="t_Reproduce" GiveTo="target" Payload="subject" Radius="30" Timeout="15" Reconsider="true"/>
+        </BFAITokenList>
+      </BFBehSendToken>
+      <ZTBehFeedback>
+        <ZTFeedbackData>
+          <ZTActionInfo locID="animalactions:WaitMate" useTargetName="true"/>
+        </ZTFeedbackData>
+      </ZTBehFeedback>
+    </BFBehExecTask>
+    <BFAICompletionData/>
+    <BFAIFailureData>
+      <BFBehExecTask>
+        <BFBehPlaySet behSet="FailureSet"/>
+      </BFBehExecTask>
+    </BFAIFailureData>
+  </BFAITaskTemplate>
+  <BFAITaskTemplate Name="RespondReproductionMarineLesbian" reserveTag="General" UniqueID="RespondReproductionMarineLesbian">
+    <BFAICreateData>
+      <Subjects>
+        <animal/>
+        <Qualifiers isSwimming="true" b_Male="0" b_Adult="1"/>
+      </Subjects>
+      <Targets>
+        <fromToken/>
+        <Qualifiers_AND inWater="true" b_Male="0" isSwimming="true" inHabitat="true"/>
+      </Targets>
+      <Objects>
+        <t_Reproduce/>
+      </Objects>
+    </BFAICreateData>
+    <BFAIEvalData fixedScore="100"/>
+    <BFBehExecTask>
+      <ZTBehFeedback>
+        <ZTFeedbackData>
+          <ZTActionInfo locID="animalactions:GoingToMate" useTargetName="true"/>
+        </ZTFeedbackData>
+      </ZTBehFeedback>
+      <BFBehSyncSet subjectBehSet="Rendezvous" targetBehSet="Rendezvous"/>
+      <BFBehSyncSet subjectBehSet="ReproductionSwimLead" targetBehSet="ReproductionSwimFollow"/>
+    </BFBehExecTask>
+    <BFAICompletionData>
+      <BFAIAttributeFloatMap reproduction="-50" rest="-10"/>
+      <BFAITargetData rest="-10"/>
+      <BFBehExecTask>
+        <ZTBehViewEvent viewKey="Pos_3"/>
+        <BFBehScript context="behavior" file="scripts/setmates.lua" function="setmates"/>
+        <ZTBehFeedback>
+          <ZTFeedbackData>
+            <ZTEmoticonInfo emoticonName="Emotelovewins"/>
+          </ZTFeedbackData>
+        </ZTBehFeedback>
+      </BFBehExecTask>
+    </BFAICompletionData>
+    <BFAIFailureData>
+      <BFBehExecTask>
+        <BFBehPlaySet behSet="FailureSet"/>
+      </BFBehExecTask>
+    </BFAIFailureData>
+  </BFAITaskTemplate>
+   <BFAITaskTemplate Name="GayMating_Call" UniqueID="GayMating_Call">
+      <BFAICreateData>
+         <Subjects>
+        	<animal/>
+            <Qualifiers_AND inWater_OR_onLand="true" b_Male="1" isSwimming="false" b_Adult="1"/>
+         </Subjects>
+         <Targets>
+        	<animal/>
+            <Qualifiers_AND inWater_OR_onLand="true" b_Male="1" isSwimming="false" sameSpecies="true" b_Adult="1"/>
+         </Targets>
+         <Objects/>
+      </BFAICreateData>
+      <BFAIEvalData needPointsGood="20">
+         <BFAIAttributeFloatMap reproduction="-30"/>
+      </BFAIEvalData>
+      <BFBehExecTask>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:MatingCallAt" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <ZTBehViewEvent viewKey="Pos_5">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalCallGood" priority="1" timeout="60" global="false" useTargetTarget="true" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehPlaySet behSet="MatingCall"/>
+      </BFBehExecTask>
+      <BFAICompletionData>
+         <BFAIAttributeFloatMap reproduction="-30"/>
+         <BFBehExecTask>
+            <ZTBehFeedback>
+               <ZTFeedbackData>
+                  <ZTEmoticonInfo emoticonName="EmoteAnimalReproductionGood"/>
+               </ZTFeedbackData>
+            </ZTBehFeedback>
+         </BFBehExecTask>
+         <BFAITokenList>
+            <BFAIToken Name="t_MatingCall" GiveTo="target" Payload="subject" Timeout="30"/>
+         </BFAITokenList>
+      </BFAICompletionData>
+   </BFAITaskTemplate>
+   <BFAITaskTemplate Name="GayMating_Answer" UniqueID="GayMating_Answer">
+      <BFAICreateData>
+         <Subjects>
+        	<animal/>
+            <Qualifiers_AND inWater_OR_onLand="true" b_Male="1" isSwimming="false" b_Adult="1"/>
+         </Subjects>
+         <Targets>
+            <fromToken/>
+	    <Qualifiers inWater_OR_onLand="true" b_Male="1" sameSpecies="true" b_Adult="1"/>
+         </Targets>
+         <Objects>
+            <t_MatingCall/>
+         </Objects>
+      </BFAICreateData>
+      <BFAIEvalData needPointsGood="20">
+         <BFAIAttributeFloatMap reproduction="-30"/>
+      </BFAIEvalData>
+      <BFBehExecTask>
+         <BFBehFaceTarget/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:MatingCallAnswer" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <ZTBehViewEvent viewKey="Pos_5">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalCallGood" priority="1" timeout="60" global="false" useTargetTarget="true" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehPlaySet behSet="MatingCall"/>
+      </BFBehExecTask>
+      <BFAICompletionData>
+         <BFAIAttributeFloatMap reproduction="-30"/>
+         <BFBehExecTask>
+            <ZTBehFeedback>
+               <ZTFeedbackData>
+                  <ZTEmoticonInfo emoticonName="EmoteAnimallovewins"/>
+               </ZTFeedbackData>
+            </ZTBehFeedback>
+         </BFBehExecTask>
+      </BFAICompletionData>
+   </BFAITaskTemplate>   
+   <BFAITaskTemplate Name="InviteReproductionGay1" TaskDelayMin="60" TaskDelayMax="180" UniqueID="InviteReproductionGay1">
+      <BFAICreateData>
+         <Subjects>
+        	<animal/>
+            <Qualifiers_AND b_Pregnant="E false" b_Male="1" hasMate="false" b_Adult="1"/>
+         </Subjects>
+         <Targets>
+        	<animal/>
+            <Qualifiers_AND inHabitat="true" hasMate="false" b_Male="1" canMate="true" sameSpecies="true" b_Adult="1"/>
+         </Targets>
+         <Objects>
+            <t_Childless/>
+         </Objects>
+      </BFAICreateData>
+      <BFAIEvalData needPointsGood="50">
+         <BFAIAttributeFloatMap reproduction="-40"/>
+      </BFAIEvalData>
+      <BFBehExecTask>
+         <BFBehHeadLook/>
+         <BFBehFaceTarget/>
+         <BFBehSendToken>
+            <BFAITokenList>
+               <BFAIToken Name="t_Reproduce" GiveTo="target" Payload="subject" Timeout="30" Reconsider="true"/>
+            </BFAITokenList>
+         </BFBehSendToken>
+         <BFBehPlaySet behSet="MatingCall"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:WaitMate" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimate targetAnim="Stand_Idle" playTime="35"/>
+      </BFBehExecTask>
+      <BFAICompletionData/>
+      <BFAIFailureData>
+         <BFBehExecTask>
+            <BFBehPlaySet behSet="FailureSet"/>
+         </BFBehExecTask>
+      </BFAIFailureData>
+   </BFAITaskTemplate>
+   <BFAITaskTemplate Name="InviteReproduction_WaterGay" TaskDelayMin="60" TaskDelayMax="180" UniqueID="InviteReproduction_WaterGay">
+      <BFAICreateData>
+         <Subjects>
+        	<animal/>
+            <Qualifiers_AND inWater="true" b_Male="1" b_Pregnant="E false" b_Adult="1"/>
+         </Subjects>
+         <Targets>
+        	<animal/>
+            <Qualifiers_AND  inWater_OR_onLand="true" inHabitat="true" b_Male="1" canMate="true" sameSpecies="true" b_Adult="1"/>
+         </Targets>
+         <Objects>
+            <t_Childless/>
+         </Objects>
+      </BFAICreateData>
+      <BFAIEvalData needPointsGood="50">
+         <BFAIAttributeFloatMap reproduction="-30"/>
+      </BFAIEvalData>
+      <BFBehExecTask>
+         <BFBehPlaySet behSet="Surface"/>
+         <BFBehHeadLook/>
+         <BFBehFaceTarget/>
+         <BFBehSendToken>
+            <BFAITokenList>
+               <BFAIToken Name="t_Reproduce" GiveTo="target" Payload="subject" Timeout="30" Reconsider="true"/>
+            </BFAITokenList>
+         </BFBehSendToken>
+         <BFBehPlaySet behSet="MatingCall"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:WaitMate" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimate targetAnim="TreadWater_Idle" playTime="35"/>
+      </BFBehExecTask>
+      <BFAICompletionData/>
+      <BFAIFailureData>
+         <BFBehExecTask>
+            <BFBehPlaySet behSet="FailureSet"/>
+         </BFBehExecTask>
+      </BFAIFailureData>
+   </BFAITaskTemplate>
+   <BFAITaskTemplate Name="RespondReproductionGay1" reserveTag="General" UniqueID="RespondReproductionGay1">
+      <BFAICreateData>
+         <Subjects>
+        	<animal/>
+            <Qualifiers inWater_OR_onLand="true" b_Male="1" b_Adult="1"/>
+         </Subjects>
+         <Targets>
+            <fromToken/>
+            <Qualifiers_AND inWater_OR_onLand="true" b_Male="1" inHabitat="true" b_Adult="1" sameSpecies="true"/>
+         </Targets>
+         <Objects>
+            <t_Reproduce/>
+         </Objects>
+      </BFAICreateData>
+      <BFAIEvalData fixedScore="100"/>
+      <BFBehExecTask>
+         <ZTBehViewEvent viewKey="Pos_4"/>
+         <BFBehHeadLook/>
+         <BFBehFaceTarget/>
+         <BFBehPlaySet behSet="MatingCall"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToMate" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockRadial subjectNode="p_MateOffset" locoSpeed="slow" targetAnim="Stand_Idle"/>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehSyncSet subjectBehSet="MateM" targetBehSet="MateM"/>
+      </BFBehExecTask>
+      <BFAICompletionData>
+         <BFAIAttributeFloatMap reproduction="-50" rest="-10"/>
+         <BFAITargetData rest="-10"/>
+         <BFBehExecTask>
+            <BFBehScript context="behavior" file="scripts/setmates.lua" function="setmates"/>
+            <ZTBehFeedback>
+               <ZTFeedbackData>
+                  <ZTEmoticonInfo emoticonName="Emotelovewins"/>
+               </ZTFeedbackData>
+            </ZTBehFeedback>
+         </BFBehExecTask>
+      </BFAICompletionData>
+      <BFAIFailureData>
+         <BFBehExecTask>
+            <BFBehPlaySet behSet="FailureSet"/>
+         </BFBehExecTask>
+      </BFAIFailureData>
+   </BFAITaskTemplate>
+   <BFAITaskTemplate Name="LesbianMating_Call" UniqueID="LesbianMating_Call">
+      <BFAICreateData>
+         <Subjects>
+        	<animal/>
+            <Qualifiers_AND inWater_OR_onLand="true" b_Male="0" isSwimming="false" b_Adult="1"/>
+         </Subjects>
+         <Targets>
+        	<animal/>
+            <Qualifiers_AND inWater_OR_onLand="true" b_Male="0" isSwimming="false" sameSpecies="true" b_Adult="1"/>
+         </Targets>
+         <Objects/>
+      </BFAICreateData>
+      <BFAIEvalData needPointsGood="20">
+         <BFAIAttributeFloatMap reproduction="-30"/>
+      </BFAIEvalData>
+      <BFBehExecTask>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:MatingCallAt" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <ZTBehViewEvent viewKey="Pos_5">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalCallGood" priority="1" timeout="60" global="false" useTargetTarget="true" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehPlaySet behSet="MatingCall"/>
+      </BFBehExecTask>
+      <BFAICompletionData>
+         <BFAIAttributeFloatMap reproduction="-30"/>
+         <BFBehExecTask>
+            <ZTBehFeedback>
+               <ZTFeedbackData>
+                  <ZTEmoticonInfo emoticonName="EmoteAnimalReproductionGood"/>
+               </ZTFeedbackData>
+            </ZTBehFeedback>
+         </BFBehExecTask>
+         <BFAITokenList>
+            <BFAIToken Name="t_MatingCall" GiveTo="target" Payload="subject" Timeout="30"/>
+         </BFAITokenList>
+      </BFAICompletionData>
+   </BFAITaskTemplate>
+   <BFAITaskTemplate Name="LesbianMating_Answer" UniqueID="LesbianMating_Answer">
+      <BFAICreateData>
+         <Subjects>
+        	<animal/>
+            <Qualifiers_AND inWater_OR_onLand="true" b_Male="0" isSwimming="false" b_Adult="1"/>
+         </Subjects>
+         <Targets>
+            <fromToken/>
+	    <Qualifiers inWater_OR_onLand="true" b_Male="0" b_Adult="1" sameSpecies="true"/>
+         </Targets>
+         <Objects>
+            <t_MatingCall/>
+         </Objects>
+      </BFAICreateData>
+      <BFAIEvalData needPointsGood="20">
+         <BFAIAttributeFloatMap reproduction="-30"/>
+      </BFAIEvalData>
+      <BFBehExecTask>
+         <BFBehFaceTarget/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:MatingCallAnswer" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <ZTBehViewEvent viewKey="Pos_5">
+            <ZTFeedbackData>
+               <ZTThoughtInfo locID="guestthoughts:AnimalCallGood" priority="1" timeout="60" global="false" useTargetTarget="true" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehViewEvent>
+         <BFBehPlaySet behSet="MatingCall"/>
+      </BFBehExecTask>
+      <BFAICompletionData>
+         <BFAIAttributeFloatMap reproduction="-30"/>
+         <BFBehExecTask>
+            <ZTBehFeedback>
+               <ZTFeedbackData>
+                  <ZTEmoticonInfo emoticonName="EmoteAnimallovewins"/>
+               </ZTFeedbackData>
+            </ZTBehFeedback>
+         </BFBehExecTask>
+      </BFAICompletionData>
+   </BFAITaskTemplate>   
+   <BFAITaskTemplate Name="InviteReproductionLesbian1" TaskDelayMin="60" TaskDelayMax="180" UniqueID="InviteReproductionLesbian1">
+      <BFAICreateData>
+         <Subjects>
+        	<animal/>
+            <Qualifiers_AND b_Pregnant="E false" b_Male="0" hasMate="false" b_Adult="1"/>
+         </Subjects>
+         <Targets>
+        	<animal/>
+            <Qualifiers_AND inHabitat="true" hasMate="false" b_Male="0" canMate="true" sameSpecies="true" b_Adult="1"/>
+         </Targets>
+         <Objects>
+            <t_Childless/>
+         </Objects>
+      </BFAICreateData>
+      <BFAIEvalData needPointsGood="50">
+         <BFAIAttributeFloatMap reproduction="-40"/>
+      </BFAIEvalData>
+      <BFBehExecTask>
+         <BFBehHeadLook/>
+         <BFBehFaceTarget/>
+         <BFBehSendToken>
+            <BFAITokenList>
+               <BFAIToken Name="t_Reproduce" GiveTo="target" Payload="subject" Timeout="30" Reconsider="true"/>
+            </BFAITokenList>
+         </BFBehSendToken>
+         <BFBehPlaySet behSet="MatingCall"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:WaitMate" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimate targetAnim="Stand_Idle" playTime="35"/>
+      </BFBehExecTask>
+      <BFAICompletionData/>
+      <BFAIFailureData>
+         <BFBehExecTask>
+            <BFBehPlaySet behSet="FailureSet"/>
+         </BFBehExecTask>
+      </BFAIFailureData>
+   </BFAITaskTemplate>
+   <BFAITaskTemplate Name="InviteReproduction_WaterLesbian" TaskDelayMin="60" TaskDelayMax="180" UniqueID="InviteReproduction_WaterLesbian">
+      <BFAICreateData>
+         <Subjects>
+        	<animal/>
+            <Qualifiers_AND inWater="true" b_Male="0" b_Pregnant="E false" b_Adult="1"/>
+         </Subjects>
+         <Targets>
+        	<animal/>
+            <Qualifiers_AND  inWater_OR_onLand="true" inHabitat="true" b_Male="0" canMate="true" sameSpecies="true" b_Adult="1"/>
+         </Targets>
+         <Objects>
+            <t_Childless/>
+         </Objects>
+      </BFAICreateData>
+      <BFAIEvalData needPointsGood="50">
+         <BFAIAttributeFloatMap reproduction="-30"/>
+      </BFAIEvalData>
+      <BFBehExecTask>
+         <BFBehPlaySet behSet="Surface"/>
+         <BFBehHeadLook/>
+         <BFBehFaceTarget/>
+         <BFBehSendToken>
+            <BFAITokenList>
+               <BFAIToken Name="t_Reproduce" GiveTo="target" Payload="subject" Timeout="30" Reconsider="true"/>
+            </BFAITokenList>
+         </BFBehSendToken>
+         <BFBehPlaySet behSet="MatingCall"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:WaitMate" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimate targetAnim="TreadWater_Idle" playTime="35"/>
+      </BFBehExecTask>
+      <BFAICompletionData/>
+      <BFAIFailureData>
+         <BFBehExecTask>
+            <BFBehPlaySet behSet="FailureSet"/>
+         </BFBehExecTask>
+      </BFAIFailureData>
+   </BFAITaskTemplate>
+   <BFAITaskTemplate Name="RespondReproductionLesbian1" reserveTag="General" UniqueID="RespondReproductionLesbian1">
+      <BFAICreateData>
+         <Subjects>
+        	<animal/>
+            <Qualifiers inWater_OR_onLand="true" b_Male="0" b_Adult="1"/>
+         </Subjects>
+         <Targets>
+            <fromToken/>
+            <Qualifiers_AND inWater_OR_onLand="true" b_Male="0" inHabitat="true" b_Adult="1"/>
+         </Targets>
+         <Objects>
+            <t_Reproduce/>
+         </Objects>
+      </BFAICreateData>
+      <BFAIEvalData fixedScore="100"/>
+      <BFBehExecTask>
+         <ZTBehViewEvent viewKey="Pos_4"/>
+         <BFBehHeadLook/>
+         <BFBehFaceTarget/>
+         <BFBehPlaySet behSet="MatingCall"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToMate" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockRadial subjectNode="p_MateOffset" locoSpeed="slow" targetAnim="Stand_Idle"/>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehSyncSet subjectBehSet="MateF" targetBehSet="MateF"/>
+      </BFBehExecTask>
+      <BFAICompletionData>
+         <BFAIAttributeFloatMap reproduction="-50" rest="-10"/>
+         <BFAITargetData rest="-10"/>
+         <BFBehExecTask>
+            <BFBehScript context="behavior" file="scripts/setmates.lua" function="setmates"/>
+            <ZTBehFeedback>
+               <ZTFeedbackData>
+                  <ZTEmoticonInfo emoticonName="Emotelovewins"/>
+               </ZTFeedbackData>
+            </ZTBehFeedback>
+         </BFBehExecTask>
+      </BFAICompletionData>
+      <BFAIFailureData>
+         <BFBehExecTask>
+            <BFBehPlaySet behSet="FailureSet"/>
+         </BFBehExecTask>
+      </BFAIFailureData>
+   </BFAITaskTemplate>
+   <BFAITaskTemplate Name="InviteReproductionGay2" TaskDelayMin="60" TaskDelayMax="180" UniqueID="InviteReproductionGay2">
+      <BFAICreateData>
+         <Subjects>
+            <animal/>
+            <Qualifiers b_Pregnant="E false" b_Male="1" b_Adult="1"/>
+         </Subjects>
+         <Targets>
+            <animal/>
+            <Qualifiers_AND inHabitat="true" b_Male="1" canMate="true" sameSpecies="true" b_Adult="1"/>
+         </Targets>
+         <Objects>
+            <t_Childless/>
+         </Objects>
+      </BFAICreateData>
+      <BFAIEvalData needPointsGood="50">
+         <BFAIAttributeFloatMap reproduction="-40"/>
+      </BFAIEvalData>
+      <BFBehExecTask>
+         <BFBehHeadLook/>
+         <BFBehFaceTarget/>
+         <BFBehSendToken>
+            <BFAITokenList>
+               <BFAIToken Name="t_Reproduce" GiveTo="target" Payload="subject" Timeout="30" Reconsider="true"/>
+            </BFAITokenList>
+         </BFBehSendToken>
+         <BFBehPlaySet behSet="Call"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:WaitMate" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimate targetAnim="Sit_Idle" playTime="35"/>
+      </BFBehExecTask>
+      <BFAICompletionData/>
+      <BFAIFailureData>
+         <BFBehExecTask>
+            <BFBehPlaySet behSet="FailureSet"/>
+         </BFBehExecTask>
+      </BFAIFailureData>
+   </BFAITaskTemplate>
+   <BFAITaskTemplate Name="RespondReproductionGay2" reserveTag="General" UniqueID="RespondReproductionGay2">
+      <BFAICreateData>
+         <Subjects>
+            <animal/>
+         </Subjects>
+         <Targets>
+            <fromToken/>
+            <Qualifiers inHabitat="true" sameSpecies="true" b_Adult="1"/>
+         </Targets>
+         <Objects>
+            <t_Reproduce/>
+         </Objects>
+      </BFAICreateData>
+      <BFAIEvalData fixedScore="100"/>
+      <BFBehExecTask>
+         <ZTBehViewEvent viewKey="Pos_4"/>
+         <BFBehHeadLook/>
+         <BFBehFaceTarget/>
+         <BFBehPlaySet behSet="Call"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToMate" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockRadial subjectNode="p_MateOffset" locoSpeed="slow" targetAnim="Stand_Idle"/>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehSyncSet subjectBehSet="MateM" targetBehSet="MateM"/>
+      </BFBehExecTask>
+      <BFAICompletionData>
+         <BFAIAttributeFloatMap reproduction="-50" rest="-10"/>
+         <BFAITargetData rest="-10"/>
+         <BFBehExecTask>
+            <BFBehScript context="behavior" file="scripts/setmates.lua" function="setmates"/>
+            <ZTBehFeedback>
+               <ZTFeedbackData>
+                  <ZTEmoticonInfo emoticonName="Emotelovewins"/>
+               </ZTFeedbackData>
+            </ZTBehFeedback>
+         </BFBehExecTask>
+      </BFAICompletionData>
+      <BFAIFailureData>
+         <BFBehExecTask>
+            <BFBehPlaySet behSet="FailureSet"/>
+         </BFBehExecTask>
+      </BFAIFailureData>
+   </BFAITaskTemplate>
+   <BFAITaskTemplate Name="InviteReproductionLesbian2" TaskDelayMin="60" TaskDelayMax="180" UniqueID="InviteReproductionLesbian2">
+      <BFAICreateData>
+         <Subjects>
+            <animal/>
+            <Qualifiers b_Pregnant="E false" b_Male="0" b_Adult="1"/>
+         </Subjects>
+         <Targets>
+            <animal/>
+            <Qualifiers_AND inHabitat="true" b_Male="0" canMate="true" sameSpecies="true" b_Adult="1"/>
+         </Targets>
+         <Objects>
+            <t_Childless/>
+         </Objects>
+      </BFAICreateData>
+      <BFAIEvalData needPointsGood="50">
+         <BFAIAttributeFloatMap reproduction="-40"/>
+      </BFAIEvalData>
+      <BFBehExecTask>
+         <BFBehHeadLook/>
+         <BFBehFaceTarget/>
+         <BFBehSendToken>
+            <BFAITokenList>
+               <BFAIToken Name="t_Reproduce" GiveTo="target" Payload="subject" Timeout="30" Reconsider="true"/>
+            </BFAITokenList>
+         </BFBehSendToken>
+         <BFBehPlaySet behSet="Call"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:WaitMate" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehAnimate targetAnim="Sit_Idle" playTime="35"/>
+      </BFBehExecTask>
+      <BFAICompletionData/>
+      <BFAIFailureData>
+         <BFBehExecTask>
+            <BFBehPlaySet behSet="FailureSet"/>
+         </BFBehExecTask>
+      </BFAIFailureData>
+   </BFAITaskTemplate>
+   <BFAITaskTemplate Name="RespondReproductionLesbian2" reserveTag="General" UniqueID="RespondReproductionLesbian2">
+      <BFAICreateData>
+         <Subjects>
+            <animal/>
+         </Subjects>
+         <Targets>
+            <fromToken/>
+            <Qualifiers inHabitat="true" sameSpecies="true" b_Adult="1"/>
+         </Targets>
+         <Objects>
+            <t_Reproduce/>
+         </Objects>
+      </BFAICreateData>
+      <BFAIEvalData fixedScore="100"/>
+      <BFBehExecTask>
+         <ZTBehViewEvent viewKey="Pos_4"/>
+         <BFBehHeadLook/>
+         <BFBehFaceTarget/>
+         <BFBehPlaySet behSet="Call"/>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTActionInfo locID="animalactions:GoingToMate" useTargetName="true"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehDockRadial subjectNode="p_MateOffset" locoSpeed="slow" targetAnim="Stand_Idle"/>
+         <BFBehHeadLook disengage="true"/>
+         <BFBehSyncSet subjectBehSet="MateF" targetBehSet="MateF"/>
+      </BFBehExecTask>
+      <BFAICompletionData>
+         <BFAIAttributeFloatMap reproduction="-50" rest="-10"/>
+         <BFAITargetData rest="-10"/>
+         <BFBehExecTask>
+            <BFBehScript context="behavior" file="scripts/setmates.lua" function="setmates"/>
+            <ZTBehFeedback>
+               <ZTFeedbackData>
+                  <ZTEmoticonInfo emoticonName="Emotelovewins"/>
+               </ZTFeedbackData>
+            </ZTBehFeedback>
+         </BFBehExecTask>
+      </BFAICompletionData>
+      <BFAIFailureData>
+         <BFBehExecTask>
+            <BFBehPlaySet behSet="FailureSet"/>
+         </BFBehExecTask>
+      </BFAIFailureData>
+   </BFAITaskTemplate>
+</BFAITaskTemplateList>
