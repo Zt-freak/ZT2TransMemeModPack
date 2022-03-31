@@ -1,0 +1,57 @@
+<BFTypedBinder binderType="MusicalRock_HrtCafe">
+    <types>
+        <entity>
+            <scenery>
+                <MusicalRock_HrtCafe />
+            </scenery>
+        </entity>
+    </types>
+    <instance>
+        <BFGEntity entityVersion="1">
+            <physObjParenting>
+                <parentObj parent="mainObj" child="shadowObj" rottype="use" postype="ignore" attachnode="link" />
+            </physObjParenting>
+        </BFGEntity>
+    </instance>
+    <shared>
+        <UIToggleButton template="adopt">
+            <UIAspect>
+                <default image="entities\objects\scenery\MusicalRock_hrtcafe\MusicalRock_hrtcafe_icon.dds" />
+            </UIAspect>
+            <UIHelpInfo name="" short="" long="" help="" ids="entityname:MusicalRock_HrtCafe" />
+            <on>
+                <event msg="ZT_SETPLACEMENTOBJECT" data="BFString" string="MusicalRock_HrtCafe" />
+            </on>
+        </UIToggleButton>
+        <BFAIEntityDataShared s_Product="Downloads" b_MusicalRock="true" s_uisort="r" s_Zoopedia="zoopedia:zoopedia_soundrock:entry" f_FameReq="40" />
+        <ZTPlacementData terrainFlatten="false" icon3Doffset="-0.85 0.25 0.65" icon3Dscale="0.65" />
+        <ZTTourData>
+            <theme_extinct value="3" />
+        </ZTTourData>
+    </shared>
+    <binder>
+        <BFNamedBinder binderName="shadowObj">
+            <instance>
+                <BFPhysObj>
+                    <BFMovingBlobShadowComponent shadowTexture="world\shadows\blob\round_blob2.tga" baseNode="footprint" width="2" length="1.5" intensity="0.3" />
+                </BFPhysObj>
+            </instance>
+        </BFNamedBinder>
+        <BFNamedBinder binderName="mainObj">
+            <instance>
+                <BFPhysObj>
+                    <BFSimpleLODComponent isBFR="true" modelfile="entities\objects\scenery\MusicalRock_hrtcafe\musicalrock_hrtcafe" initialTextKey="snd &quot;againstme&quot; looping" switch="0 20" />
+                    <BFGroundFitComponent heightOffset="0.0" />
+                </BFPhysObj>
+            </instance>
+        </BFNamedBinder>
+        <BFBinder>
+            <instance>
+                <ZTEconomyComponent cost="420">
+                    <ZTTransaction name="build" costType="parent" type="debit" category="construction" />
+                    <ZTTransaction name="destroy" cost="16.428571428571427" costType="%parent" type="credit" category="recycling" />
+                </ZTEconomyComponent>
+            </instance>
+        </BFBinder>
+    </binder>
+</BFTypedBinder>

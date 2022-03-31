@@ -1,0 +1,12 @@
+<ZT2Strings>
+   <LOC_STRING _locID="entityname:MusicalRock_HrtCafe">HRT.CAFE Musical Rock</LOC_STRING>
+   <LOC_STRING _locID="entityname:MusicalRock_HrtCafe_stt">HRT.CAFE Musical Rock</LOC_STRING>
+   <LOC_STRING _locID="entityname:MusicalRock_HrtCafe_lower">The HRT.CAFE Musical Rock</LOC_STRING>
+   <LOC_STRING _locID="entityname:MusicalRock_HrtCafe_ltt">
+      <color r="255" g="248" b="178">
+         <b>HRT.CAFE Musical Rock</b>
+      </color>
+      <br/>
+      Click to select and place HRT.CAFE Musical Rock.
+   </LOC_STRING>
+</ZT2Strings>

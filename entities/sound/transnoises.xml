@@ -1,0 +1,7 @@
+<soundtags>
+    <BFSoundtag>
+        <BF3DSndFactory name="againstme">
+            <snd name="entities/objects/scenery/MusicalRock_HrtCafe/sound/AgainstMe.wav" volume="3" mindist="1" maxdist="60" looping="1" softenGain=".4" />
+        </BF3DSndFactory>
+    </BFSoundtag>
+</soundtags>
