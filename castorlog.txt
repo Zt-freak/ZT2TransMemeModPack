@@ -1,0 +1,1 @@
+{"type":"reticulata","timestamp":"135.665","zooFame":"1","zooName":"Tiny Zoo","currentMonth":"0","currentTimeOfDay":"0.12903225421906","currentSimTime":"92.625595092773","cash":"3.4028234663853e+038","donationsAllAnimals":"0","educationDonations":"0","totalDonations":"0","speciesCount":"0","species":[]}
