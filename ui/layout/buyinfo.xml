@@ -1,0 +1,929 @@
+<UILayout name="Buy Info Layout">
+    <UIRegion x="0" y="0" w="1024" h="768" xalign="min" yalign="min" walign="len" halign="len" />
+    <UIState active="normal" visible="normal" />
+    <UIAspect>
+        <default />
+    </UIAspect>
+    <children>
+        <UILayout name="Specific Buy Info Layout">
+            <UIRegion x="712" y="547" w="309" h="222" xalign="min" yalign="min" walign="len" halign="len" />
+            <UIState active="normal" visible="normal" />
+            <UIAspect string="">
+                <default image="" sound="">
+                    <BFRect x="0" y="0" w="0" h="0" />
+                    <BFColor r="0" g="0" b="0" a="0" />
+                </default>
+            </UIAspect>
+            <children>
+                <ZTBuyInfoPanel name="Buy Info Panel">
+                    <DynamicStartPos x="133" y="31" />
+                    <UIRegion x="0" y="0" w="312" h="249" xalign="min" yalign="min" walign="len" halign="len" />
+                    <UIState active="normal" visible="hidden" />
+                    <UIAspect string="">
+                        <default image="" sound="">
+                            <BFRect x="0" y="0" w="0" h="0" />
+                            <BFColor r="0" g="0" b="0" a="0" />
+                        </default>
+                    </UIAspect>
+                    <UIShowHideAnim time=".3">
+                        <start x="311" y="0" w="-1" h="-1" />
+                        <end x="0" y="0" w="-1" h="-1" />
+                    </UIShowHideAnim>
+                    <children>
+                        <UILayout name="Buy Object Panel">
+                            <UIRegion x="0" y="49" w="311" h="249" xalign="min" yalign="min" walign="len" halign="len" />
+                            <UIState active="normal" visible="normal" />
+                            <UIAspect string="">
+                                <default image="" sound="">
+                                    <BFRect x="0" y="0" w="0" h="0" />
+                                    <BFColor r="0" g="0" b="0" a="0" />
+                                </default>
+                            </UIAspect>
+                            <children>
+                                <UILayout name="background" template="blank">
+                                    <UIRegion x="0" y="0" w="309" h="173" xalign="min" yalign="min" walign="len" halign="len" />
+                                    <UIState active="normal" visible="normal" />
+                                    <UIAspect>
+                                        <default image="" sound="">
+                                            <BFRect x="0" y="0" w="309" h="173" />
+                                            <BFColor r="255" g="255" b="255" a="255" />
+                                        </default>
+                                    </UIAspect>
+                                </UILayout>
+                                <UILayout name="top header" template="header_default">
+                                    <UIRegion x="0" y="0" w="0" h="20" xalign="min" yalign="min" walign="max" halign="len" />
+                                    <UIState active="normal" visible="normal" />
+                                    <UIAspect>
+                                        <default image="" sound="">
+                                            <BFRect x="0" y="0" w="309" h="173" />
+                                            <BFColor r="255" g="255" b="255" a="255" />
+                                        </default>
+                                    </UIAspect>
+                                </UILayout>
+                                <UILayout name="3d preview" template="3d_displayfield">
+                                    <UIRegion x="15" y="28" w="97" h="85" xalign="min" yalign="min" walign="len" halign="len" />
+                                    <UIState active="normal" visible="normal" />
+                                    <UIAspect>
+                                        <default image="" sound="">
+                                            <BFRect x="0" y="0" w="309" h="173" />
+                                            <BFColor r="255" g="255" b="255" a="255" />
+                                        </default>
+                                    </UIAspect>
+                                    <children>
+                                        <UIStatic name="buy preview position">
+                                            <UIRegion x="46" y="89" w="1" h="1" xalign="min" yalign="min" walign="len" halign="len" />
+                                            <UIAspect draw3D="true">
+                                                <default />
+                                            </UIAspect>
+                                        </UIStatic>
+                                    </children>
+                                </UILayout>
+                                <UILayout name="panel well" template="panelwell">
+                                    <UIRegion x="125" y="28" w="172" h="132" xalign="min" yalign="min" walign="len" halign="len" />
+                                    <UIState active="normal" visible="normal" />
+                                    <UIAspect>
+                                        <default image="" sound="">
+                                            <BFRect x="0" y="0" w="309" h="173" />
+                                            <BFColor r="255" g="255" b="255" a="255" />
+                                        </default>
+                                    </UIAspect>
+                                </UILayout>
+                                <UIStatic name="Entity Image Display">
+                                    <UIRegion x="15" y="28" w="97" h="85" xalign="min" yalign="min" walign="len" halign="len" />
+                                    <UIState active="normal" visible="normal" />
+                                    <UIAspect>
+                                        <default sssimage="ui\shared\white1x1.dds" sound="">
+                                            <BFRect x="3" y="5" w="57" h="48" />
+                                            <BFColor r="255" g="255" b="255" a="255" />
+                                        </default>
+                                    </UIAspect>
+                                </UIStatic>
+                                <UILayout name="button well" template="buttonbar">
+                                    <UIRegion x="10" y="125" w="107" h="44" xalign="min" yalign="min" walign="len" halign="len" />
+                                    <UIState active="normal" visible="normal" />
+                                    <UIAspect>
+                                        <default image="" sound="">
+                                            <BFRect x="0" y="0" w="309" h="173" />
+                                            <BFColor r="255" g="255" b="255" a="255" />
+                                        </default>
+                                    </UIAspect>
+                                </UILayout>
+                                <UILayout name="Available Object Panel">
+                                    <UIRegion x="0" y="0" w="311" h="200" xalign="min" yalign="min" walign="len" halign="len" />
+                                    <UIState active="normal" visible="normal" />
+                                    <UIAspect string="">
+                                        <default image="" sound="">
+                                            <BFRect x="0" y="0" w="0" h="0" />
+                                            <BFColor r="0" g="0" b="0" a="0" />
+                                        </default>
+                                    </UIAspect>
+                                    <children>
+                                        <UIToggleButton name="sort button" toggle="0" sticky="0">
+                                            <UIRegion x="245" y="22" w="60" h="60" xalign="min" yalign="min" walign="len" halign="len" />
+                                            <UIState active="normal" visible="normal" />
+                                            <UIHelpInfo name="" short="" long="" help="" ids="buyinfo:zookeeper_rec_button" />
+                                            <UIAspect string="" alwayshit="true">
+                                                <default image="ui/shared/button_zookeeper_2.dds" sound="">
+                                                    <BFColor r="255" g="255" b="255" a="255" />
+                                                </default>
+                                                <standard>
+                                                    <normal>
+                                                        <BFRect x="0" y="0" w="64" h="64" />
+                                                    </normal>
+                                                    <highlighted>
+                                                        <BFRect x="0" y="64" w="64" h="64" />
+                                                    </highlighted>
+                                                    <activated>
+                                                        <BFRect x="64" y="0" w="64" h="64" />
+                                                    </activated>
+                                                    <disabled>
+                                                        <BFRect x="64" y="64" w="64" h="64" />
+                                                    </disabled>
+                                                </standard>
+                                                <alternate>
+                                                    <normal>
+                                                        <BFRect x="64" y="0" w="64" h="64" />
+                                                    </normal>
+                                                    <highlighted>
+                                                        <BFRect x="0" y="64" w="64" h="64" />
+                                                    </highlighted>
+                                                    <activated>
+                                                        <BFRect x="64" y="0" w="64" h="64" />
+                                                    </activated>
+                                                    <disabled>
+                                                        <BFRect x="64" y="64" w="64" h="64" />
+                                                    </disabled>
+                                                </alternate>
+                                            </UIAspect>
+                                            <UIHotKeys />
+                                            <on>
+                                                <event msg="UI_CHILD" data="UIChildData" name="Sort Panel">
+                                                    <child msg="UI_SHOW" />
+                                                </event>
+                                            </on>
+                                            <off>
+                                                <event msg="UI_CHILD" data="UIChildData" name="Sort Panel">
+                                                    <child msg="UI_HIDE" />
+                                                </event>
+                                            </off>
+                                        </UIToggleButton>
+                                        <UILayout name="cost">
+                                            <UIRegion x="115" y="0" w="300" h="34" xalign="min" yalign="min" walign="len" halign="len" />
+                                            <UIAspect>
+                                                <default />
+                                            </UIAspect>
+                                            <children>
+                                                <UIText name="Cost Label">
+                                                    <UIRegion x="0" y="0" w="140" h="20" xalign="min" yalign="min" walign="len" halign="len" />
+                                                    <UIState active="normal" visible="normal" />
+                                                    <UIAspect locid="buyinfo:cost_label">
+                                                        <default>
+                                                            <BFFont>
+                                                                <BFColor r="255" g="248" b="178" a="255" />
+                                                            </BFFont>
+                                                        </default>
+                                                    </UIAspect>
+                                                </UIText>
+                                                <ZTMoneyText name="Cost Display" posformat="buyinfo:buypanelposformat" nocents="true" nominus="true">
+                                                    <UIRegion x="0" y="15" w="140" h="50" xalign="min" yalign="min" walign="len" halign="len" />
+                                                    <UIState active="normal" visible="normal" />
+                                                    <UIAspect>
+                                                        <default>
+                                                            <BFFont>
+                                                                <BFColor r="255" g="248" b="178" a="255" />
+                                                            </BFFont>
+                                                        </default>
+                                                    </UIAspect>
+                                                </ZTMoneyText>
+                                                <UILayout name="Upkeep Panel">
+                                                    <UIRegion x="0" y="0" w="0" h="0" xalign="min" yalign="min" walign="max" halign="max" />
+                                                    <UIState active="normal" visible="normal" />
+                                                    <UIAspect string="">
+                                                        <default />
+                                                    </UIAspect>
+                                                    <children>
+                                                        <UIText name="Upkeep Label">
+                                                            <UIRegion x="0" y="0" w="150" h="20" xalign="min" yalign="min" walign="len" halign="len" />
+                                                            <UIState active="normal" visible="normal" />
+                                                            <UIAspect locid="buyinfo:upkeep_label">
+                                                                <default>
+                                                                    <BFFont align="right">
+                                                                        <BFColor r="255" g="248" b="178" a="255" />
+                                                                    </BFFont>
+                                                                </default>
+                                                            </UIAspect>
+                                                        </UIText>
+                                                        <ZTMoneyText name="Upkeep Display" posformat="buyinfo:buypanelposformat" nocents="true" nominus="true">
+                                                            <UIRegion x="0" y="15" w="150" h="50" xalign="min" yalign="min" walign="len" halign="len" />
+                                                            <UIState active="normal" visible="normal" />
+                                                            <UIAspect>
+                                                                <default>
+                                                                    <BFFont align="right">
+                                                                        <BFColor r="255" g="248" b="178" a="255" />
+                                                                    </BFFont>
+                                                                </default>
+                                                            </UIAspect>
+                                                        </ZTMoneyText>
+                                                    </children>
+                                                </UILayout>
+                                            </children>
+                                        </UILayout>
+                                    </children>
+                                </UILayout>
+                                <UILayout name="Research Object Panel">
+                                    <UIRegion x="0" y="0" w="311" h="200" xalign="min" yalign="min" walign="len" halign="len" />
+                                    <UIState active="normal" visible="hidden" />
+                                    <UIAspect string="">
+                                        <default image="" sound="">
+                                            <BFRect x="0" y="0" w="0" h="0" />
+                                            <BFColor r="0" g="0" b="0" a="0" />
+                                        </default>
+                                    </UIAspect>
+                                    <children>
+                                        <UILayout name="research cost">
+                                            <UIRegion x="130" y="45" w="150" h="49" xalign="min" yalign="min" walign="len" halign="len" />
+                                            <children>
+                                                <UIText name="Cost Label">
+                                                    <UIRegion x="0" y="0" w="150" h="40" xalign="min" yalign="min" walign="len" halign="len" />
+                                                    <UIState active="normal" visible="normal" />
+                                                    <UIAspect locid="buyinfo:research_cost_label">
+                                                        <default>
+                                                            <BFFont>
+                                                                <BFColor r="255" g="248" b="178" a="255" />
+                                                            </BFFont>
+                                                        </default>
+                                                    </UIAspect>
+                                                    <text type="multi" />
+                                                </UIText>
+                                                <ZTMoneyText name="Cost Display" posformat="buyinfo:buypanelposformat" nocents="true" nominus="true">
+                                                    <UIRegion x="0" y="15" w="300" h="40" xalign="min" yalign="min" walign="len" halign="len" />
+                                                    <UIState active="normal" visible="normal" />
+                                                    <UIAspect>
+                                                        <default>
+                                                            <BFFont>
+                                                                <BFColor r="255" g="248" b="178" a="255" />
+                                                            </BFFont>
+                                                        </default>
+                                                    </UIAspect>
+                                                </ZTMoneyText>
+                                            </children>
+                                        </UILayout>
+                                    </children>
+                                </UILayout>
+                                <UIButton name="zoopedia link">
+                                    <UIRegion x="32" y="116" w="62" h="62" xalign="min" yalign="min" walign="len" halign="len" />
+                                    <UIState active="normal" visible="normal" />
+                                    <UIHelpInfo name="" short="" long="" help="" ids="buyinfo:zoopedia_button" />
+                                    <UIAspect string="">
+                                        <default image="ui/shared/button_zoopedia.dds" sound="">
+                                            <BFRect x="0" y="0" w="-1" h="-1" />
+                                            <BFColor r="255" g="255" b="255" a="255" />
+                                        </default>
+                                        <standard>
+                                            <normal>
+                                                <BFRect x="0" y="0" w="64" h="64" />
+                                            </normal>
+                                            <highlighted>
+                                                <BFRect x="0" y="64" w="64" h="64" />
+                                            </highlighted>
+                                            <activated sound="uiclick">
+                                                <BFRect x="64" y="0" w="64" h="64" />
+                                            </activated>
+                                            <disabled>
+                                                <BFRect x="64" y="64" w="64" h="64" />
+                                            </disabled>
+                                        </standard>
+                                    </UIAspect>
+                                    <UIHotKeys />
+                                </UIButton>
+                                <UIText name="Entity Name Label">
+                                    <UIRegion x="12" y="3" w="300" h="50" xalign="min" yalign="min" walign="len" halign="len" />
+                                    <UIState active="normal" visible="normal" />
+                                    <UIAspect>
+                                        <default>
+                                            <BFFont x="4">
+                                                <BFColor r="59" g="83" b="66" a="255" />
+                                            </BFFont>
+                                        </default>
+                                    </UIAspect>
+                                    <text format="entityname:format" />
+                                </UIText>
+                                <UILayout name="biome">
+                                    <UIRegion x="130" y="45" w="150" h="64" xalign="min" yalign="min" walign="len" halign="len" />
+                                    <UIAspect>
+                                        <default />
+                                    </UIAspect>
+                                    <children>
+                                        <UIText name="Biome Label">
+                                            <UIRegion x="0" y="0" w="60" h="20" xalign="min" yalign="min" walign="len" halign="len" />
+                                            <UIState active="normal" visible="normal" />
+                                            <UIAspect locid="buyinfo:biome_label">
+                                                <default>
+                                                    <BFFont>
+                                                        <BFColor r="255" g="248" b="178" a="255" />
+                                                    </BFFont>
+                                                </default>
+                                            </UIAspect>
+                                        </UIText>
+                                        <UIStatic name="Biome Icon">
+                                            <UIRegion x="5" y="20" w="40" h="40" xalign="min" yalign="min" walign="len" halign="len" />
+                                            <UIHelpInfo name="" short="" long="" help="" ids="" />
+                                            <UIState active="normal" visible="normal" />
+                                            <UIAspect>
+                                                <default image="">
+                                                    <BFRect x="0" y="0" w="-1" h="-1" />
+                                                    <BFColor r="255" g="255" b="255" a="255" />
+                                                </default>
+                                            </UIAspect>
+                                        </UIStatic>
+                                        <UIText name="Location Label">
+                                            <UIRegion x="85" y="0" w="75" h="40" xalign="min" yalign="min" walign="len" halign="len" />
+                                            <UIState active="normal" visible="normal" />
+                                            <UIAspect locid="buyinfo:location_label">
+                                                <default>
+                                                    <BFFont align="">
+                                                        <BFColor r="255" g="248" b="178" a="255" />
+                                                    </BFFont>
+                                                </default>
+                                            </UIAspect>
+                                        </UIText>
+                                        <UIStatic name="location map" template="location">
+                                            <UIRegion x="95" y="20" w="40" h="40" xalign="min" yalign="min" walign="len" halign="len" />
+                                        </UIStatic>
+                                    </children>
+                                </UILayout>
+                                <UILayout name="biome_location_endangerment">
+                                    <UIRegion x="125" y="90" w="160" h="64" xalign="min" yalign="min" walign="len" halign="len" />
+                                    <UIAspect>
+                                        <default />
+                                    </UIAspect>
+                                    <children>
+                                        <UIText name="Conservation Label">
+                                            <UIRegion x="0" y="0" w="60" h="20" xalign="min" yalign="min" walign="len" halign="len" />
+                                            <UIState active="normal" visible="normal" />
+                                            <UIAspect locid="entityinfo:conservation_label">
+                                                <default>
+                                                    <BFFont>
+                                                        <BFColor r="255" g="248" b="178" a="255" />
+                                                    </BFFont>
+                                                </default>
+                                            </UIAspect>
+                                        </UIText>
+                                        <UIMultiIcon name="Buy Panel Conservation Image  Display">
+                                            <UIRegion x="0" y="20" w="40" h="40" xalign="min" yalign="min" walign="len" halign="len" />
+                                            <UIState active="normal" visible="normal" />
+                                            <UIAspect alwayshit="true">
+                                                <default image="">
+                                                    <BFRect x="0" y="0" w="-1" h="-1" />
+                                                    <BFColor r="255" g="255" b="255" a="255" />
+                                                </default>
+                                            </UIAspect>
+                                            <images>
+                                                <image key="Extinct" image="ui/infopan/extinct.dds" id="entityinfo:conservation_extinct_stt" />
+                                                <image key="Critical" image="ui/infopan/critical.dds" id="entityinfo:conservation_critical_stt" />
+                                                <image key="Endangered" image="ui/infopan/endangered.dds" id="entityinfo:conservation_endangered_stt" />
+                                                <image key="Vulnerable" image="ui/infopan/vulnerable.dds" id="entityinfo:conservation_vulnerable_stt" />
+                                                <image key="LowRisk" image="ui/infopan/lowrisk.dds" id="entityinfo:conservation_lowrisk_stt" />
+                                            </images>
+                                        </UIMultiIcon>
+                                        <UIText name="Biome Label">
+                                            <UIRegion x="58" y="0" w="60" h="20" xalign="min" yalign="min" walign="len" halign="len" />
+                                            <UIState active="normal" visible="normal" />
+                                            <UIAspect locid="buyinfo:biome_label">
+                                                <default>
+                                                    <BFFont>
+                                                        <BFColor r="255" g="248" b="178" a="255" />
+                                                    </BFFont>
+                                                </default>
+                                            </UIAspect>
+                                            <text type="multi" />
+                                        </UIText>
+                                        <UIStatic name="Biome Icon">
+                                            <UIRegion x="60" y="20" w="40" h="40" xalign="min" yalign="min" walign="len" halign="len" />
+                                            <UIHelpInfo name="" short="" long="" help="" ids="" />
+                                            <UIState active="normal" visible="normal" />
+                                            <UIAspect>
+                                                <default image="">
+                                                    <BFRect x="0" y="0" w="-1" h="-1" />
+                                                    <BFColor r="255" g="255" b="255" a="255" />
+                                                </default>
+                                            </UIAspect>
+                                        </UIStatic>
+                                        <UIText name="Location Label">
+                                            <UIRegion x="86" y="0" w="75" h="40" xalign="min" yalign="min" walign="len" halign="len" />
+                                            <UIState active="normal" visible="normal" />
+                                            <UIAspect locid="buyinfo:location_label">
+                                                <default>
+                                                    <BFFont align="right">
+                                                        <BFColor r="255" g="248" b="178" a="255" />
+                                                    </BFFont>
+                                                </default>
+                                            </UIAspect>
+                                        </UIText>
+                                        <UIStatic name="location map" template="location">
+                                            <UIRegion x="116" y="20" w="40" h="40" xalign="min" yalign="min" walign="len" halign="len" />
+                                            <UIAspect alwayshit="true">
+                                                <default image="">
+                                                    <BFRect x="0" y="0" w="-1" h="-1" />
+                                                    <BFColor r="255" g="255" b="255" a="255" />
+                                                </default>
+                                            </UIAspect>
+                                        </UIStatic>
+                                    </children>
+                                </UILayout>
+                                <UILayout name="gender">
+                                    <UIRegion x="130" y="100" w="100" h="30" xalign="min" yalign="min" walign="len" halign="len" />
+                                    <UIAspect>
+                                        <default />
+                                    </UIAspect>
+                                    <children>
+                                        <UIText name="Gender Label">
+                                            <UIRegion x="0" y="7" w="100" h="20" xalign="min" yalign="min" walign="len" halign="len" />
+                                            <UIState active="normal" visible="normal" />
+                                            <UIAspect locid="buyinfo:gender_label">
+                                                <default>
+                                                    <BFFont>
+                                                        <BFColor r="255" g="248" b="178" a="255" />
+                                                    </BFFont>
+                                                </default>
+                                            </UIAspect>
+                                        </UIText>
+                                        <UILayout name="Gender Icons">
+                                            <UIRegion x="65" y="0" w="30" h="30" xalign="min" yalign="min" walign="len" halign="len" />
+                                            <children>
+                                                <UILayout name="male">
+                                                    <UIRegion x="0" y="0 " w="0" h="0" xalign="min" yalign="min" walign="max" halign="max" />
+                                                    <UIHelpInfo name="" short="" long="" help="" ids="buyinfo:gender_male" />
+                                                    <UIState active="normal" visible="normal" />
+                                                    <UIAspect alwayshit="true">
+                                                        <default image="ui/infopan/icon_male.dds">
+                                                            <BFRect x="0" y="0" w="64" h="64" />
+                                                            <BFColor r="255" g="255" b="255" a="255" />
+                                                        </default>
+                                                    </UIAspect>
+                                                </UILayout>
+                                                <UILayout name="female">
+                                                    <UIRegion x="0" y="0" w="0" h="0" xalign="min" yalign="min" walign="max" halign="max" />
+                                                    <UIHelpInfo name="" short="" long="" help="" ids="buyinfo:gender_female" />
+                                                    <UIState active="normal" visible="normal" />
+                                                    <UIAspect alwayshit="true">
+                                                        <default image="ui/infopan/icon_female.dds">
+                                                            <BFRect x="0" y="0" w="64" h="64" />
+                                                            <BFColor r="255" g="255" b="255" a="255" />
+                                                        </default>
+                                                    </UIAspect>
+                                                </UILayout>
+                                                <UILayout name="male people">
+                                                    <UIRegion x="0" y="0 " w="0" h="0" xalign="min" yalign="min" walign="max" halign="max" />
+                                                    <UIHelpInfo name="" short="" long="" help="" ids="buyinfo:gender_male_people" />
+                                                    <UIState active="normal" visible="normal" />
+                                                    <UIAspect alwayshit="true">
+                                                        <default image="ui/infopan/icon_male.dds">
+                                                            <BFRect x="0" y="0" w="64" h="64" />
+                                                            <BFColor r="255" g="255" b="255" a="255" />
+                                                        </default>
+                                                    </UIAspect>
+                                                </UILayout>
+                                                <UILayout name="female people">
+                                                    <UIRegion x="0" y="0" w="0" h="0" xalign="min" yalign="min" walign="max" halign="max" />
+                                                    <UIHelpInfo name="" short="" long="" help="" ids="buyinfo:gender_female_people" />
+                                                    <UIState active="normal" visible="normal" />
+                                                    <UIAspect alwayshit="true">
+                                                        <default image="ui/infopan/icon_female.dds">
+                                                            <BFRect x="0" y="0" w="64" h="64" />
+                                                            <BFColor r="255" g="255" b="255" a="255" />
+                                                        </default>
+                                                    </UIAspect>
+                                                </UILayout>
+                                            </children>
+                                        </UILayout>
+                                    </children>
+                                </UILayout>
+                                <UILayout name="rotate">
+                                    <!--rotate buttons-->
+                                    <UIRegion x="9" y="135" w="256" h="64" xalign="min" yalign="min" walign="len" halign="len" />
+                                    <UIState active="normal" visible="normal" />
+                                    <UIAspect string="">
+                                        <default image="" sound="">
+                                            <BFRect x="0" y="0" w="0" h="0" />
+                                            <BFColor r="0" g="0" b="0" a="0" />
+                                        </default>
+                                    </UIAspect>
+                                    <UIHotKeys />
+                                    <children>
+                                        <UIButton name="rotate_clock" toggle="0" sticky="1">
+                                            <UIRegion x="1" y="0" w="33" h="33" xalign="min" yalign="min" walign="len" halign="len" />
+                                            <UIHelpInfo name="" short="" long="" help="" ids="shell:rotate_clock" />
+                                            <UIState active="normal" visible="normal" />
+                                            <UIAspect string="" alwayshit="true">
+                                                <default image="ui\infopan\windowbutts.dds" sound="">
+                                                    <BFColor r="255" g="255" b="255" a="255" />
+                                                </default>
+                                                <standard>
+                                                    <normal>
+                                                        <BFRect x="0" y="136" w="33" h="33" />
+                                                    </normal>
+                                                    <highlighted>
+                                                        <BFRect x="34" y="136" w="33" h="33" />
+                                                    </highlighted>
+                                                    <activated>
+                                                        <BFRect x="68" y="136" w="33" h="33" />
+                                                    </activated>
+                                                    <disabled>
+                                                        <BFRect x="0" y="170" w="33" h="33" />
+                                                    </disabled>
+                                                </standard>
+                                            </UIAspect>
+                                            <UIHotKeys />
+                                            <activate>
+                                                <event msg="ZT_OBJECT_ROTATE" data="BFString" string="right" />
+                                            </activate>
+                                        </UIButton>
+                                        <UIButton name="rotate_counter-clock" toggle="0" sticky="1">
+                                            <UIRegion x="75" y="0" w="33" h="33" xalign="min" yalign="min" walign="len" halign="len" />
+                                            <UIState active="normal" visible="normal" />
+                                            <UIHelpInfo name="" short="" long="" help="" ids="shell:rotate_counter-clock" />
+                                            <UIAspect string="" alwayshit="true">
+                                                <default image="ui\infopan\windowbutts.dds" sound="">
+                                                    <BFColor r="255" g="255" b="255" a="255" />
+                                                </default>
+                                                <standard>
+                                                    <normal>
+                                                        <BFRect x="0" y="204" w="33" h="33" />
+                                                    </normal>
+                                                    <highlighted>
+                                                        <BFRect x="34" y="204" w="33" h="33" />
+                                                    </highlighted>
+                                                    <activated>
+                                                        <BFRect x="68" y="204" w="33" h="33" />
+                                                    </activated>
+                                                    <disabled>
+                                                        <BFRect x="68" y="170" w="33" h="33" />
+                                                    </disabled>
+                                                </standard>
+                                            </UIAspect>
+                                            <UIHotKeys />
+                                            <activate>
+                                                <event msg="ZT_OBJECT_ROTATE" data="BFString" string="left" />
+                                            </activate>
+                                        </UIButton>
+                                    </children>
+                                </UILayout>
+                                <UILayout name="Items Sold">
+                                    <UIRegion x="130" y="85" w="200" h="75" xalign="min" yalign="min" walign="len" halign="len" />
+                                    <children>
+                                        <UIText name="Items Sold Label">
+                                            <UIRegion x="0" y="0" w="150" h="20" xalign="min" yalign="min" walign="len" halign="len" />
+                                            <UIState active="normal" visible="normal" />
+                                            <UIAspect locid="buyinfo:items_sold_label">
+                                                <default>
+                                                    <BFFont>
+                                                        <BFColor r="255" g="248" b="178" a="255" />
+                                                    </BFFont>
+                                                </default>
+                                            </UIAspect>
+                                        </UIText>
+                                        <UIListBox name="items" template="panel" rows="1" columns="-1">
+                                            <UIRegion x="0" y="12" w="163" h="60" xalign="min" yalign="min" walign="len" halign="len" />
+                                        </UIListBox>
+                                    </children>
+                                </UILayout>
+                                <UIButton name="close">
+                                    <UIRegion x="-28" y="-7" w="35" h="35" xalign="max" yalign="min" walign="len" halign="len" />
+                                    <UIState active="normal" visible="normal" />
+                                    <UIHelpInfo name="" short="" long="" help="" ids="entityinfo:close_button" />
+                                    <UIAspect string="">
+                                        <default image="ui\shared\button_close.dds" sound="">
+                                            <BFRect x="0" y="0" w="-1" h="-1" />
+                                            <BFColor r="255" g="255" b="255" a="255" />
+                                        </default>
+                                        <standard>
+                                            <normal>
+                                                <BFRect x="0" y="0" w="64" h="64" />
+                                            </normal>
+                                            <highlighted>
+                                                <BFRect x="0" y="64" w="64" h="64" />
+                                            </highlighted>
+                                            <activated sound="">
+                                                <BFRect x="64" y="0" w="64" h="64" />
+                                            </activated>
+                                            <disabled>
+                                                <BFRect x="64" y="64" w="64" h="64" />
+                                            </disabled>
+                                        </standard>
+                                    </UIAspect>
+                                    <UIHotKeys />
+                                    <activate>
+                                        <event msg="ZT_SETMODE" data="BFString" string="mode_selection" />
+                                    </activate>
+                                </UIButton>
+                            </children>
+                        </UILayout>
+                        <UILayout name="Terraform Brush Info Panel">
+                            <UIRegion x="0" y="49" w="311" h="249" xalign="min" yalign="min" walign="len" halign="len" />
+                            <UIState active="normal" visible="hidden" />
+                            <UIAspect string="">
+                                <default image="" sound="">
+                                    <BFRect x="0" y="0" w="0" h="0" />
+                                    <BFColor r="0" g="0" b="0" a="0" />
+                                </default>
+                            </UIAspect>
+                            <children>
+                                <UILayout name="background" template="blank">
+                                    <UIRegion x="0" y="0" w="309" h="173" xalign="min" yalign="min" walign="len" halign="len" />
+                                    <UIState active="normal" visible="normal" />
+                                    <UIAspect>
+                                        <default image="" sound="">
+                                            <BFRect x="0" y="0" w="309" h="173" />
+                                            <BFColor r="255" g="255" b="255" a="255" />
+                                        </default>
+                                    </UIAspect>
+                                </UILayout>
+                                <UILayout name="top header" template="header_default">
+                                    <UIRegion x="0" y="0" w="0" h="20" xalign="min" yalign="min" walign="max" halign="len" />
+                                    <UIState active="normal" visible="normal" />
+                                    <UIAspect>
+                                        <default image="" sound="">
+                                            <BFRect x="0" y="0" w="309" h="173" />
+                                            <BFColor r="255" g="255" b="255" a="255" />
+                                        </default>
+                                    </UIAspect>
+                                </UILayout>
+                                <UILayout name="3d preview" template="3d_displayfield">
+                                    <UIRegion x="15" y="28" w="97" h="85" xalign="min" yalign="min" walign="len" halign="len" />
+                                    <UIState active="normal" visible="normal" />
+                                    <UIAspect>
+                                        <default image="" sound="">
+                                            <BFRect x="0" y="0" w="309" h="173" />
+                                            <BFColor r="255" g="255" b="255" a="255" />
+                                        </default>
+                                    </UIAspect>
+                                </UILayout>
+                                <UILayout name="panel well" template="panelwell">
+                                    <UIRegion x="125" y="28" w="172" h="132" xalign="min" yalign="min" walign="len" halign="len" />
+                                    <UIState active="normal" visible="normal" />
+                                    <UIAspect>
+                                        <default image="" sound="">
+                                            <BFRect x="0" y="0" w="309" h="173" />
+                                            <BFColor r="255" g="255" b="255" a="255" />
+                                        </default>
+                                    </UIAspect>
+                                </UILayout>
+                                <UILayout name="button well" template="buttonbar">
+                                    <UIRegion x="10" y="125" w="107" h="44" xalign="min" yalign="min" walign="len" halign="len" />
+                                    <UIState active="normal" visible="normal" />
+                                    <UIAspect>
+                                        <default image="" sound="">
+                                            <BFRect x="0" y="0" w="309" h="173" />
+                                            <BFColor r="255" g="255" b="255" a="255" />
+                                        </default>
+                                    </UIAspect>
+                                </UILayout>
+                                <UIText name="Brush Size Name Label">
+                                    <UIRegion x="12" y="3" w="300" h="50" xalign="min" yalign="min" walign="len" halign="len" />
+                                    <UIState active="normal" visible="normal" />
+                                    <UIAspect>
+                                        <default>
+                                            <BFFont x="4">
+                                                <BFColor r="59" g="83" b="66" a="255" />
+                                            </BFFont>
+                                        </default>
+                                    </UIAspect>
+                                    <text format="entityname:format" />
+                                </UIText>
+                                <UILayout name="Brush Size Image Holder">
+                                    <UIRegion x="15" y="28" w="97" h="85" xalign="min" yalign="min" walign="len" halign="len" />
+                                    <UIState active="normal" visible="normal" />
+                                    <UIAspect />
+                                    <children>
+                                        <UIStatic name="Brush Size Image Display">
+                                            <!--initial brush size display will change but will never exceed the initial size-->
+                                            <UIRegion x="0" y="0" w="0" h="0" xalign="% min" yalign="% min" walign="% max" halign="% max" />
+                                            <UIState active="normal" visible="normal" />
+                                            <UIAspect>
+                                                <default image="" sound="">
+                                                    <BFColor r="255" g="255" b="255" a="255" />
+                                                    <BFRect x="0" y="0" w="-1" h="-1" />
+                                                </default>
+                                            </UIAspect>
+                                        </UIStatic>
+                                    </children>
+                                </UILayout>
+                                <UIToggleSet name="brush Size">
+                                    <!--buttons for changing brush sizes-->
+                                    <UIRegion x="9" y="135" w="256" h="64" xalign="min" yalign="min" walign="len" halign="len" />
+                                    <UIState active="normal" visible="normal" />
+                                    <UIAspect string="">
+                                        <default image="" sound="">
+                                            <BFRect x="0" y="0" w="0" h="0" />
+                                            <BFColor r="0" g="0" b="0" a="0" />
+                                        </default>
+                                    </UIAspect>
+                                    <UIHotKeys />
+                                    <children>
+                                        <UIPushButton name="decrease" toggle="0" sticky="1">
+                                            <UIRegion x="0" y="0" w="33" h="33" xalign="min" yalign="min" walign="len" halign="len" />
+                                            <UIState active="normal" visible="normal" />
+                                            <UIHelpInfo name="" short="shell:brushdecrease_stt" long="shell:brushdecrease_ltt" help="" />
+                                            <UIAspect string="" alwayshit="true">
+                                                <default image="ui\infopan\windowbutts.dds" sound="">
+                                                    <BFColor r="255" g="255" b="255" a="255" />
+                                                </default>
+                                                <standard>
+                                                    <normal>
+                                                        <BFRect x="0" y="0" w="33" h="33" />
+                                                    </normal>
+                                                    <highlighted>
+                                                        <BFRect x="34" y="0" w="33" h="33" />
+                                                    </highlighted>
+                                                    <activated>
+                                                        <BFRect x="68" y="0" w="33" h="33" />
+                                                    </activated>
+                                                    <disabled>
+                                                        <BFRect x="0" y="34" w="33" h="33" />
+                                                    </disabled>
+                                                </standard>
+                                            </UIAspect>
+                                            <UIHotKeys />
+                                            <activate>
+                                                <event msg="ZT_TERRAINCURSOR_SIZE" data="BFString" string="-" />
+                                            </activate>
+                                        </UIPushButton>
+                                        <UIPushButton name="increase" toggle="0" sticky="1">
+                                            <UIRegion x="75" y="0" w="33" h="33" xalign="min" yalign="min" walign="len" halign="len" />
+                                            <UIState active="normal" visible="normal" />
+                                            <UIHelpInfo name="" short="shell:brushincrease_stt" long="shell:brushincrease_ltt" help="" />
+                                            <UIAspect string="" alwayshit="true">
+                                                <default image="ui\infopan\windowbutts.dds" sound="">
+                                                    <BFColor r="255" g="255" b="255" a="255" />
+                                                </default>
+                                                <standard>
+                                                    <normal>
+                                                        <BFRect x="0" y="68" w="33" h="33" />
+                                                    </normal>
+                                                    <highlighted>
+                                                        <BFRect x="34" y="68" w="33" h="33" />
+                                                    </highlighted>
+                                                    <activated>
+                                                        <BFRect x="68" y="68" w="33" h="33" />
+                                                    </activated>
+                                                    <disabled>
+                                                        <BFRect x="0" y="102" w="33" h="33" />
+                                                    </disabled>
+                                                </standard>
+                                            </UIAspect>
+                                            <UIHotKeys />
+                                            <activate>
+                                                <event msg="ZT_TERRAINCURSOR_SIZE" data="BFString" string="+" />
+                                            </activate>
+                                        </UIPushButton>
+                                    </children>
+                                </UIToggleSet>
+                                <UIButton name="close">
+                                    <UIRegion x="-28" y="-7" w="35" h="35" xalign="max" yalign="min" walign="len" halign="len" />
+                                    <UIState active="normal" visible="normal" />
+                                    <UIHelpInfo name="" short="" long="" help="" ids="entityinfo:close_button" />
+                                    <UIAspect string="">
+                                        <default image="ui\shared\button_close.dds" sound="">
+                                            <BFRect x="0" y="0" w="-1" h="-1" />
+                                            <BFColor r="255" g="255" b="255" a="255" />
+                                        </default>
+                                        <standard>
+                                            <normal>
+                                                <BFRect x="0" y="0" w="64" h="64" />
+                                            </normal>
+                                            <highlighted>
+                                                <BFRect x="0" y="64" w="64" h="64" />
+                                            </highlighted>
+                                            <activated sound="">
+                                                <BFRect x="64" y="0" w="64" h="64" />
+                                            </activated>
+                                            <disabled>
+                                                <BFRect x="64" y="64" w="64" h="64" />
+                                            </disabled>
+                                        </standard>
+                                    </UIAspect>
+                                    <UIHotKeys />
+                                    <activate>
+                                        <event msg="ZT_SETMODE" data="BFString" string="mode_selection" />
+                                    </activate>
+                                </UIButton>
+                                <UIText name="Brush Size  Label">
+                                    <UIRegion x="135" y="31" w="300" h="50" xalign="min" yalign="min" walign="len" halign="len" />
+                                    <UIState active="normal" visible="normal" />
+                                    <UIAspect locid="buyinfo:brush_size_label">
+                                        <default>
+                                            <BFFont>
+                                                <BFColor r="255" g="248" b="178" a="255" />
+                                            </BFFont>
+                                        </default>
+                                    </UIAspect>
+                                </UIText>
+                                <UIText name="Brush Size Num">
+                                    <UIRegion x="135" y="45" w="300" h="50" xalign="min" yalign="min" walign="len" halign="len" />
+                                    <UIState active="normal" visible="normal" />
+                                    <UIAspect>
+                                        <default>
+                                            <BFFont>
+                                                <BFColor r="255" g="255" b="255" a="255" />
+                                            </BFFont>
+                                        </default>
+                                    </UIAspect>
+                                    <text format="buyinfo:brush_size_format">100%</text>
+                                </UIText>
+                            </children>
+                        </UILayout>
+                        <UILayout name="research bump">
+                            <UIRegion x="45" y="3" w="249" h="49" xalign="min" yalign="min" walign="len" halign="len" />
+                            <UIState active="normal" visible="normal" />
+                            <UIAspect>
+                                <default />
+                                <normal />
+                            </UIAspect>
+                            <children>
+                                <UILayout name="background">
+                                    <UIRegion x="0" y="0" w="249" h="49" />
+                                    <UIState active="normal" visible="normal" />
+                                    <UIAspect>
+                                        <default image="ui/shared/researchbar.dds">
+                                            <BFRect x="0" y="0" w="249" h="49" />
+                                        </default>
+                                    </UIAspect>
+                                    <children>
+                                        <UISlider name="research progress bar" span="0">
+                                            <UIRegion x="72" y="12" w="158" h="27" />
+                                            <children>
+                                                <UIStatic>
+                                                    <UIRegion walign="max" halign="max" />
+                                                    <UIAspect>
+                                                        <default image="">
+                                                            <BFColor r="255" g="255" b="255" a="128" />
+                                                        </default>
+                                                    </UIAspect>
+                                                </UIStatic>
+                                                <UIStatic name="thumb">
+                                                    <UIRegion w="0" h="100" halign="% min" />
+                                                    <UIAspect>
+                                                        <default image="UI/shared/white1x1.dds">
+                                                            <BFColor r="0" g="255" b="0" a="200" />
+                                                            <BFRect x="0" y="0" w="1" h="1" />
+                                                        </default>
+                                                    </UIAspect>
+                                                </UIStatic>
+                                            </children>
+                                            <thumb name="thumb" axis="x" style="stretch">
+                                                <UIRegion x="0" y="0" w="100" h="0" walign="% min" halign="max" />
+                                            </thumb>
+                                        </UISlider>
+                                    </children>
+                                </UILayout>
+                                <UIToggleButton name="start research button" sticky="1">
+                                    <UIRegion x="24" y="2" w="48" h="48" xalign="min" yalign="min" walign="len" halign="len" />
+                                    <UIState active="normal" visible="normal" />
+                                    <UIHelpInfo name="" short="" long="" help="" ids="buyinfo:research_button" />
+                                    <UIAspect string="" alwayshit="true">
+                                        <default image="ui/maingame/buttons.dds" sound="" />
+                                        <standard>
+                                            <normal>
+                                                <BFRect x="0" y="256" w="64" h="64" />
+                                            </normal>
+                                            <highlighted>
+                                                <BFRect x="0" y="320" w="64" h="64" />
+                                            </highlighted>
+                                            <activated>
+                                                <BFRect x="64" y="256" w="64" h="64" />
+                                            </activated>
+                                            <disabled>
+                                                <BFRect x="64" y="320" w="64" h="64" />
+                                            </disabled>
+                                        </standard>
+                                        <alternate>
+                                            <normal>
+                                                <BFRect x="64" y="256" w="64" h="64" />
+                                            </normal>
+                                            <highlighted>
+                                                <BFRect x="64" y="256" w="64" h="64" />
+                                            </highlighted>
+                                            <activated>
+                                                <BFRect x="64" y="256" w="64" h="64" />
+                                            </activated>
+                                            <disabled>
+                                                <BFRect x="64" y="320" w="64" h="64" />
+                                            </disabled>
+                                        </alternate>
+                                    </UIAspect>
+                                    <UIHotKeys />
+                                    <on>
+                                        <event msg="UI_CHILD" data="UIChildData" name="Buy Info Panel">
+                                            <child msg="ZT_START_RESEARCHING_ENTITY" />
+                                        </event>
+                                    </on>
+                                </UIToggleButton>
+                            </children>
+                        </UILayout>
+                    </children>
+                </ZTBuyInfoPanel>
+            </children>
+        </UILayout>
+    </children>
+</UILayout>
