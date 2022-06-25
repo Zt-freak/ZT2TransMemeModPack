@@ -5,6 +5,11 @@ Trans rights!
 
 This mod adds Trans pride paths, a flag, a HRT.CAFE sign and estrogen and testosterone to the game. Includes Mjmannella's same-sex mating mod.
 
+# Additional dependencies
+If you want the estrogen and testosterone to work, you need Arluq version 2.7 or higher.
+
+[Arluq releases](https://github.com/ZtModArchive/ArluqTools/releases)
+
 ## Credits
 - Apodemus
 - [Mjmannella](https://github.com/Mjmannella) - same-sex mating mod
