@@ -1,7 +1,9 @@
-# Trans Meme Modpack
+# Transgender Meme Pack
 [![GitHub license](https://img.shields.io/badge/licence-anti--fascist-blue)](https://github.com/Zt-freak/ZT2TransMemeModPack/blob/master/LICENSE)
 
-Trans rights!
+<img src="TransMemePack.png" alt="Transgender Meme Pack logo"/>
+
+Trans rights are human rights!
 
 This mod adds Trans pride paths, a flag, a HRT.CAFE sign and estrogen and testosterone to the game. Includes Mjmannella's same-sex mating mod.
 
