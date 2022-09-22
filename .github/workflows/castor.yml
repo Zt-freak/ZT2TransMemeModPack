@@ -21,3 +21,4 @@ jobs:
         update_latest_release: true
         overwrite: true
         verbose: true
+        draft: false
