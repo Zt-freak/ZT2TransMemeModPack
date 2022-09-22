@@ -1,0 +1,23 @@
+name: Castor
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Castor
+      uses: ZtModArchive/Castor-Build-Action@1.0.0-beta.1
+    - uses: xresloader/upload-to-github-release@main
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        file: "*.z2f;*.zip;"
+        release_id: ${{ github.event.release.release_id }}
+        overwrite: true
+        verbose: true
