@@ -1,14 +1,13 @@
 <BFAITaskTemplateList>
-    <BFAITaskTemplate Name="BuyBlahajGift" CursorTask="false" reserveTag="Use_Cart"
-        TaskDelayMin="1000000000" TaskDelayMax="1000000001" UniqueID="gift:BuyBlahajGift">
+    <BFAITaskTemplate Name="BuySharkIKEAGift" CursorTask="false" reserveTag="Use_Cart"
+        TaskDelayMin="1000000000" TaskDelayMax="1000000001" UniqueID="gift:BuySharkIKEAGift">
         <BFAICreateData>
             <Subjects>
                 <Guest />
-                <Qualifiers_AND inWater_OR_onLand="true" b_NoBuyLHandGift="false" />
+                <Qualifiers inWater_OR_onLand="true" />
             </Subjects>
             <Targets>
                 <giftcart_mm />
-                <Qualifiers inSight="30" />
             </Targets>
             <Objects>
                 <t_BlahajGift />
@@ -19,7 +18,7 @@
                 social="-100" amusement="-100" gift="-100" bathroom="-100" viewanimals="-100" />
         </BFAIEvalData>
         <BFBehExecTask>
-            <BFBehPlaySet behSet="BuyBlahajGift" />
+            <BFBehPlaySet behSet="BuySharkIKEAGift" />
             <ZTBehFeedback>
                 <ZTFeedbackData>
                     <ZTThoughtInfo locID="guestthoughts:BuyGift" priority="1" timeout="60"

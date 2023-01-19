@@ -8,9 +8,10 @@ Trans rights are human rights!
 This mod adds Trans pride paths, a flag, a HRT.CAFE sign and estrogen and testosterone to the game. Includes Mjmannella's same-sex mating mod.
 
 # Additional dependencies
-If you want the estrogen and testosterone to work, you need Arluq version 2.7 or higher.
+If you want the estrogen and testosterone to work, you need Arluq version 2.7 or higher. Additionally, If you want Guests to buy BLÅHAJ plushies, you need Buffzoo's Blahaj animal.
 
 [Arluq releases](https://github.com/ZtModArchive/ArluqTools/releases)
+[Buffzoo's Blahaj](https://www.nexusmods.com/zootycoon2/mods/209)
 
 ## Credits
 - Apodemus
@@ -22,6 +23,3 @@ If you want the estrogen and testosterone to work, you need Arluq version 2.7 or
 - IKEA of Sweden - BLÅHAJ zoopedia entry
 - Wikipedia - Estrogen and testosterone zoopedia entry
 - Nederlandse Spoorwegen - Gladde vloer sign design
-
-## Cut content
-- Gender dysphoria is no more :) It was supposed to be a custom disease, but due to needing to override game files, it is not implemented.
