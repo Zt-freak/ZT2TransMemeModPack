@@ -1,0 +1,12 @@
+<BehaviorSets>
+   <BuySharkIKEAGift>
+      <subjects>
+         <Guest/>
+      </subjects>
+      <behaviors>
+         <BFBehPlaySet behSet="DockGiftCart"/>
+         <BFBehAttachObject attachEntity="Blahaj_Gift" subjectNode="Bip01 L Finger0" detachAction="inventory"/>
+         <BFBehAnimate targetAnim="Stand_Turn180"/>
+      </behaviors>
+   </BuySharkIKEAGift>
+</BehaviorSets>

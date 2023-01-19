@@ -1,0 +1,31 @@
+
+<BFTypedBinder binderType="Blahaj_Gift">
+    <types>
+       <entity>
+          <item>
+             <Blahaj_Gift/>
+          </item>
+       </entity>
+    </types>
+    <instance>
+       <BFGEntity entityVersion="1"/>
+    </instance>
+    <shared>
+       <UIToggleButton template="adopt">
+          <UIAspect>
+             <default image="ui/infopan/icon_Blahaj_Gift.dds"/>
+          </UIAspect>
+          <UIHelpInfo name="" short="" long="" help="" ids="entityname:Blahaj_Gift"/>
+       </UIToggleButton>
+       <BFAIEntityDataShared b_MarineGift="true" b_Puppet="true"/>
+    </shared>
+    <binder>
+       <BFNamedBinder binderName="mainObj">
+          <instance>
+             <BFPhysObj>
+                <BFSimpleLODComponent isBFR="true" modelfile="entities\objects\enrichment\BlahajDummy\BlahajDummy" scale="1.0" switch="0 36"/>
+             </BFPhysObj>
+          </instance>
+       </BFNamedBinder>
+    </binder>
+ </BFTypedBinder>
