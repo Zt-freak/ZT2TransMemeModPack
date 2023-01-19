@@ -1,0 +1,13 @@
+<ZT2Strings>
+    <entityname>
+        <Blahaj_Gift>BLÅHAJ</Blahaj_Gift>
+        <Blahaj_Gift_stt>BLÅHAJ</Blahaj_Gift_stt>
+        <Blahaj_Gift_lower>the BLÅHAJ</Blahaj_Gift_lower>
+        <Blahaj_Gift_ltt>
+            <color r="255" g="248" b="178">
+                <b>BLÅHAJ</b>
+            </color>
+            <br /> Guests who enjoy watching Buffzoo's Blahaj will buy this gift.
+        </Blahaj_Gift_ltt>
+    </entityname>
+</ZT2Strings>

@@ -1,0 +1,20 @@
+<BehaviorSets>
+   <GiftCartSellItem>
+      <subjects>
+         <giftcart_mm />
+      </subjects>
+      <behaviors>
+         <BFBehAnimate physObj="Vendor" targetAnim="Stand_ShopReceiveItem" />
+      </behaviors>
+   </GiftCartSellItem>
+   <BuyBlahajGift>
+      <subjects>
+         <Guest/>
+      </subjects>
+      <behaviors>
+         <BFBehPlaySet behSet="DockGiftCart"/>
+         <BFBehAttachObject attachEntity="Blahaj_Gift" subjectNode="Bip01 L Finger0" detachAction="inventory"/>
+         <BFBehAnimate targetAnim="Stand_Turn180"/>
+      </behaviors>
+   </BuyBlahajGift>
+</BehaviorSets>

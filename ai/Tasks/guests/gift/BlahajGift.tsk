@@ -1,0 +1,35 @@
+<BFAITaskTemplateList>
+    <BFAITaskTemplate Name="BuyBlahajGift" CursorTask="false" reserveTag="Use_Cart"
+        TaskDelayMin="1000000000" TaskDelayMax="1000000001" UniqueID="gift:BuyBlahajGift">
+        <BFAICreateData>
+            <Subjects>
+                <Guest />
+                <Qualifiers_AND inWater_OR_onLand="true" b_NoBuyLHandGift="false" />
+            </Subjects>
+            <Targets>
+                <giftcart_mm />
+                <Qualifiers inSight="30" />
+            </Targets>
+            <Objects>
+                <t_BlahajGift />
+            </Objects>
+        </BFAICreateData>
+        <BFAIEvalData>
+            <BFAIAttributeFloatMap hunger="-100" thirst="-100" dessert="-100" rest="-100"
+                social="-100" amusement="-100" gift="-100" bathroom="-100" viewanimals="-100" />
+        </BFAIEvalData>
+        <BFBehExecTask>
+            <BFBehPlaySet behSet="BuyBlahajGift" />
+            <ZTBehFeedback>
+                <ZTFeedbackData>
+                    <ZTThoughtInfo locID="guestthoughts:BuyGift" priority="1" timeout="60"
+                        global="false" />
+                </ZTFeedbackData>
+            </ZTBehFeedback>
+        </BFBehExecTask>
+        <BFAICompletionData>
+            <BFAIAttributeFloatMap gift="-50" />
+            <BFAISubjectData happiness="price_effect(-5,0,5)" />
+        </BFAICompletionData>
+    </BFAITaskTemplate>
+</BFAITaskTemplateList>
