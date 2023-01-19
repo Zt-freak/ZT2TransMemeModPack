@@ -10,8 +10,8 @@ This mod adds Trans pride paths, a flag, a HRT.CAFE sign and estrogen and testos
 # Additional dependencies
 If you want the estrogen and testosterone to work, you need Arluq version 2.7 or higher. Additionally, If you want Guests to buy BLÅHAJ plushies, you need Buffzoo's Blahaj animal.
 
-[Arluq releases](https://github.com/ZtModArchive/ArluqTools/releases)
-[Buffzoo's Blahaj](https://www.nexusmods.com/zootycoon2/mods/209)
+- [Arluq releases](https://github.com/ZtModArchive/ArluqTools/releases)
+- [Buffzoo's Blahaj](https://www.nexusmods.com/zootycoon2/mods/209)
 
 ## Credits
 - Apodemus
